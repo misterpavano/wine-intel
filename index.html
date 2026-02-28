@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wine Intel</title>
+  <title>Wine Intel — Week of Feb 21, 2026</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -12,61 +12,176 @@
     .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:0.35em;color:#c9a07a;margin-bottom:12px;}
     h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,80px);font-weight:600;line-height:1;color:#f7f2ed;}
     h1 em{font-style:italic;color:#c9a07a;}
+    .for-amy{font-family:'Cormorant Garamond',serif;font-size:14px;color:#c9a07a;margin-top:6px;letter-spacing:0.15em;}
     .header-meta{margin-top:16px;font-size:11px;color:#8a6a6a;display:flex;gap:20px;flex-wrap:wrap;}
+    .week-banner{background:#7b2d44;color:#f7f2ed;padding:12px 40px;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;letter-spacing:0.05em;border-bottom:2px solid #5a1f30;}
     .zone{padding:44px 40px;}
     .zone-ma{background:#fdf8f3;border-top:4px solid #7b2d44;}
     .zone-thermo{background:#f5f0eb;border-top:4px solid #a0522d;}
     .zone-micro{background:#f0f4f0;border-top:4px solid #4a7c59;}
     .zone-auto{background:#f0f0f7;border-top:4px solid #3d3d7a;}
-    .zone-suppliers{background:#fdf5f0;border-top:4px solid #c9a07a;}
+    .zone-industry{background:#fdf5f0;border-top:4px solid #c9a07a;}
     .zone-head{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;}
     .zone-label{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;}
-    .zone-ma .zone-label{color:#7b2d44;} .zone-thermo .zone-label{color:#a0522d;} .zone-micro .zone-label{color:#4a7c59;} .zone-auto .zone-label{color:#3d3d7a;} .zone-suppliers .zone-label{color:#9a6a30;}
+    .zone-ma .zone-label{color:#7b2d44;} .zone-thermo .zone-label{color:#a0522d;} .zone-micro .zone-label{color:#4a7c59;} .zone-auto .zone-label{color:#3d3d7a;} .zone-industry .zone-label{color:#9a6a30;}
     .zone-rule{flex:1;height:1px;opacity:0.2;background:currentColor;}
     .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
     .card{padding:24px;border:1px solid;background:#fff;text-decoration:none;color:inherit;display:block;transition:box-shadow 0.15s,transform 0.15s;}
     .card:hover{box-shadow:0 6px 24px rgba(45,10,26,0.1);transform:translateY(-2px);}
-    .zone-ma .card{border-color:#e8d0d8;} .zone-thermo .card{border-color:#e8d5c0;} .zone-micro .card{border-color:#c8dcc8;} .zone-auto .card{border-color:#c8c8e0;} .zone-suppliers .card{border-color:#e8dcc8;}
+    .zone-ma .card{border-color:#e8d0d8;} .zone-thermo .card{border-color:#e8d5c0;} .zone-micro .card{border-color:#c8dcc8;} .zone-auto .card{border-color:#c8c8e0;} .zone-industry .card{border-color:#e8dcc8;}
     .card-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;font-weight:600;margin-bottom:8px;}
-    .zone-ma .card-tag{color:#7b2d44;} .zone-thermo .card-tag{color:#a0522d;} .zone-micro .card-tag{color:#4a7c59;} .zone-auto .card-tag{color:#3d3d7a;} .zone-suppliers .card-tag{color:#9a6a30;}
+    .zone-ma .card-tag{color:#7b2d44;} .zone-thermo .card-tag{color:#a0522d;} .zone-micro .card-tag{color:#4a7c59;} .zone-auto .card-tag{color:#3d3d7a;} .zone-industry .card-tag{color:#9a6a30;}
     .card h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;line-height:1.3;margin-bottom:10px;}
     .card p{font-size:13px;line-height:1.8;color:#5a3a3a;}
     .card-foot{margin-top:14px;padding-top:10px;border-top:1px solid #f0e8e0;font-size:11px;color:#999;display:flex;justify-content:space-between;}
     footer{background:#2d0a1a;color:#8a6a6a;text-align:center;padding:24px 40px;font-size:11px;letter-spacing:0.1em;}
-    @media(max-width:768px){header,.zone{padding:24px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
+    @media(max-width:768px){header,.zone,.week-banner{padding:24px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
   <header>
-    <div class="eyebrow">Daily Industry Intelligence</div>
+    <div class="eyebrow">Weekly Industry Retrospective</div>
     <h1>Wine <em>Intel</em></h1>
-    <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:#c9a07a;margin-top:6px;letter-spacing:0.15em;">For Amy</div>
+    <div class="for-amy">For Amy</div>
     <div class="header-meta">
-      <span>Initialized — reports begin tomorrow</span>
+      <span>Week of February 21–28, 2026</span>
       <span>Powered by Wally</span>
+      <span>Daily reports begin March 1</span>
     </div>
   </header>
+  <div class="week-banner">Catching up on last week — daily reports begin tomorrow, March 1st</div>
 
+  <!-- M&A / SUPPLIERS -->
   <div class="zone zone-ma">
-    <div class="zone-head"><div class="zone-label">M&A &amp; Suppliers</div><div class="zone-rule"></div></div>
-    <div class="cards"><div class="card"><div class="card-tag">Preview</div><h3>Enological Suppliers &amp; M&amp;A</h3><p>Acquisitions, partnerships, and consolidation across winemaking suppliers — oak, closures, yeast, fining agents, and more.</p><div class="card-foot"><span>Reports begin tomorrow</span></div></div></div>
+    <div class="zone-head"><div class="zone-label">Enological Suppliers &amp; M&amp;A</div><div class="zone-rule"></div></div>
+    <div class="cards">
+      <a class="card" href="https://wineindustryadvisor.com/2026/02/27/breakthru-beverage-group-and-oneill-expand-distribution-partnership-to-colorado/" target="_blank">
+        <div class="card-tag">Distribution / Partnership</div>
+        <h3>Breakthru Beverage &amp; O'Neill Expand Nationwide</h3>
+        <p>Breakthru Beverage Group — one of the largest US beverage distributors — extended its distribution partnership with O'Neill Vintners & Distillers to cover Colorado, completing a full US footprint rollout. The move consolidates route-to-market for O'Neill's portfolio across all Breakthru markets and signals continued vertical integration pressure in the three-tier system.</p>
+        <div class="card-foot"><span>Wine Industry Advisor</span><span>Feb 27, 2026</span></div>
+      </a>
+      <a class="card" href="https://www.shankennewsdaily.com/2026/02/26/39279/news-briefs-for-february-26-2026/" target="_blank">
+        <div class="card-tag">Workforce / Restructuring</div>
+        <h3>Southern Glazer's Cuts Corporate Staff, Doubles Down on Fine Wine</h3>
+        <p>Southern Glazer's Wine &amp; Spirits announced workforce reductions impacting under 1% of employees, concentrated in corporate and back-office functions. CEO Wayne Chaplin emphasized frontline commercial and operations roles were protected. The company simultaneously reiterated a strategic commitment to fine wine, suggesting a leaner structure aimed at premium category growth.</p>
+        <div class="card-foot"><span>Shanken News Daily</span><span>Feb 26, 2026</span></div>
+      </a>
+      <a class="card" href="https://www.wineindustryinsight.com/p/one-year-in-trump-s-tariffs-have-not-helped-u-s-wine-businesses" target="_blank">
+        <div class="card-tag">Trade / Tariffs</div>
+        <h3>One Year of Trump Tariffs: US Wine Businesses Still Struggling</h3>
+        <p>A year into Trump's tariff regime, US wine businesses report little benefit. Gallo — the largest US wine company — is closing its Napa Valley production facility and has planned layoffs at four additional California properties. Import cost pressures on key inputs (French oak, Italian closures, German filtration equipment) remain unresolved, squeezing margin across the supply chain.</p>
+        <div class="card-foot"><span>Wine Industry Insight</span><span>Feb 20, 2026</span></div>
+      </a>
+      <a class="card" href="https://ediblemontereybay.com/blog/putting-talbott-tasting-room-closure-in-perspective/" target="_blank">
+        <div class="card-tag">Closures</div>
+        <h3>Talbott Tasting Room Closes Permanently — March 22</h3>
+        <p>Talbott Vineyards announced the permanent closure of its tasting room effective March 22, 2026, citing ongoing industry pressures. The wine remains available through other channels. This follows a broader pattern of DTC tasting room closures across the Central Coast as foot traffic and operational costs become increasingly misaligned.</p>
+        <div class="card-foot"><span>Edible Monterey Bay</span><span>Feb 25, 2026</span></div>
+      </a>
+    </div>
   </div>
 
+  <!-- THERMOVINIFICATION -->
   <div class="zone zone-thermo">
     <div class="zone-head"><div class="zone-label">Thermovinification</div><div class="zone-rule"></div></div>
-    <div class="cards"><div class="card"><div class="card-tag">Preview</div><h3>Heat Treatment &amp; Extraction</h3><p>Latest research and commercial developments in thermovinification, flash détente, and heat-assisted extraction technology.</p><div class="card-foot"><span>Reports begin tomorrow</span></div></div></div>
+    <div class="cards">
+      <a class="card" href="https://scottlab.com/best-practices-for-making-red-wines-after-flash-d%C3%A9tente" target="_blank">
+        <div class="card-tag">Technique / Best Practices</div>
+        <h3>Scott Labs Updates Flash Détente Protocol for Rot-Affected Fruit</h3>
+        <p>Scott Laboratories published updated winemaking guidance for post-flash détente red wine production, with specific focus on botrytis and rot-infected harvests. Key: flash détente inactivates laccase (critical for oxidation prevention in compromised fruit) and volatilizes methoxypyrazines, reducing herbaceous character. Enzyme and yeast selection guidance updated for 2026 vintages working with heat-extracted musts.</p>
+        <div class="card-foot"><span>Scott Laboratories</span><span>Technical Guide</span></div>
+      </a>
+      <a class="card" href="https://pellencus.com/products/winery/flash-detente/" target="_blank">
+        <div class="card-tag">Equipment / Technology</div>
+        <h3>Pellenc Flash Détente: Extraction Benchmarks &amp; Touchscreen Control</h3>
+        <p>Pellenc's Flash Détente system — operating at 185°F with sub-5-minute treatment windows — demonstrates measurable gains in anthocyanin extraction, polyphenol concentration, and polysaccharide content versus traditional cold maceration. The updated interface provides real-time parameter control (temperature, maceration hold time) and operator alerts. A benchmark for evaluating ROI on thermovinification capital investment.</p>
+        <div class="card-foot"><span>Pellenc USA</span><span>Technology Reference</span></div>
+      </a>
+      <div class="card">
+        <div class="card-tag">Context</div>
+        <h3>Why Thermovinification Is Gaining Ground in 2026</h3>
+        <p>With increasing frequency of botrytis pressure, climate-driven fruit inconsistency, and labor cost reduction pressure, flash détente and thermovinification systems are seeing renewed investment across mid-size and large production facilities. The ability to salvage compromised fruit, reduce maceration time, and improve color stability is driving ROI conversations at facilities processing 50,000+ cases annually.</p>
+        <div class="card-foot"><span>Industry Analysis</span><span>Feb 2026</span></div>
+      </div>
+    </div>
   </div>
 
+  <!-- MICROBIAL STABILITY -->
   <div class="zone zone-micro">
     <div class="zone-head"><div class="zone-label">Microbial Stability</div><div class="zone-rule"></div></div>
-    <div class="cards"><div class="card"><div class="card-tag">Preview</div><h3>Spoilage, SO₂ &amp; Alternatives</h3><p>Microbial spoilage prevention, sulfite alternatives, brett control, and emerging stability technologies.</p><div class="card-foot"><span>Reports begin tomorrow</span></div></div></div>
+    <div class="cards">
+      <a class="card" href="https://ift.onlinelibrary.wiley.com/doi/10.1111/1541-4337.70425" target="_blank">
+        <div class="card-tag">Research / 2026 Publication</div>
+        <h3>Microbial Activity &amp; Natural Wine: New Comprehensive Review</h3>
+        <p>A 2026 paper in <em>Comprehensive Reviews in Food Science and Food Safety</em> (Zhang et al.) maps microbial population dynamics across spontaneous vinification — from organic grape to bottled natural wine. Key findings: Saccharomycin shows conjugated efficacy with SO₂ for Brettanomyces control; early yeast dominance suppresses subsequent microbial load through nutrient competition and fatty acid inhibition. Significant implications for low-intervention winemakers managing stability without heavy sulfur regimes.</p>
+        <div class="card-foot"><span>Wiley / IFT · 2026</span><span>Peer Reviewed</span></div>
+      </a>
+      <a class="card" href="https://www.mdpi.com/2304-8158/14/18/3164" target="_blank">
+        <div class="card-tag">Research / UV-C</div>
+        <h3>UV-C Treatment Shows Promise for Brett-Spoiled Pinot Noir</h3>
+        <p>MDPI <em>Foods</em> study on UV-C irradiation of Brettanomyces-spoiled Pinot Noir demonstrates microbiological storage stability over 12 weeks without significant changes to volatile ester profile — a critical quality marker. UV-C as a non-chemical intervention is gaining traction as a post-bottling spoilage control option, particularly for producers reducing SO₂ additions or working with low-sulfite export markets.</p>
+        <div class="card-foot"><span>MDPI Foods · Sep 2025</span><span>Peer Reviewed</span></div>
+      </a>
+      <a class="card" href="https://winemakermag.com/articles/1648-brettanomyces" target="_blank">
+        <div class="card-tag">Practical / DMDC</div>
+        <h3>DMDC (Velcorin) Protocols for Post-Bottling Brett Control</h3>
+        <p>Updated Velcorin® (DMDC, produced by LANXESS) application protocols clarify use in conjunction with sulfite and sterile filtration for bottling-line Brett control. DMDC is increasingly relevant as a point-of-bottling intervention — particularly for wines with borderline microbial loads heading into warm-climate distribution or long transit times. Key: DMDC addition window and concentration limits for compliant use in export markets.</p>
+        <div class="card-foot"><span>WineMaker Magazine</span><span>Sep 2025</span></div>
+      </a>
+    </div>
   </div>
 
+  <!-- WINERY AUTOMATION -->
   <div class="zone zone-auto">
     <div class="zone-head"><div class="zone-label">Winery Automation</div><div class="zone-rule"></div></div>
-    <div class="cards"><div class="card"><div class="card-tag">Preview</div><h3>Robotics, AI &amp; Smart Cellar</h3><p>Automation in bottling, sorting, barrel management, sensory analysis, and precision viticulture.</p><div class="card-foot"><span>Reports begin tomorrow</span></div></div></div>
+    <div class="cards">
+      <a class="card" href="https://sonomawinegrape.org/reservoir-farms-sonoma/" target="_blank">
+        <div class="card-tag">Infrastructure / Hub</div>
+        <h3>Reservoir Farms, Sonoma — World's First On-Farm Robotics Hub Opens</h3>
+        <p>Sonoma County Winegrowers and Reservoir launched Reservoir Farms, Sonoma — billed as the world's first on-farm automation and ag-tech hub for vineyards. Multiple robotics companies are operating in parallel ("Olympic Village for ag-tech") allowing side-by-side evaluation of vineyard robots in real vineyard conditions. Budbreak Innovations debuted Emma, an RGB-imaging robot for vine monitoring and precision treatment application.</p>
+        <div class="card-foot"><span>Sonoma Winegrape</span><span>Dec 2025 · Now Operational</span></div>
+      </a>
+      <a class="card" href="https://www.roboticstomorrow.com/article/2026/01/how-a-leading-winery-boosted-efficiency-with-cobot-palletizing/26053" target="_blank">
+        <div class="card-tag">Cellar / Palletizing</div>
+        <h3>Cobot Palletizing Integration at Scale — Case Study</h3>
+        <p>A January 2026 case study from Robotics Tomorrow documents a mid-size winery's deployment of collaborative robot (cobot) palletizing, integrating with existing bottling line infrastructure without full facility redesign. Result: measurable throughput increase at end-of-line with reduced labor dependency. The cobot model is increasingly favored over fixed automation for wineries with seasonal volume variability and SKU complexity.</p>
+        <div class="card-foot"><span>Robotics Tomorrow</span><span>Jan 2026</span></div>
+      </a>
+      <a class="card" href="https://www.asme.org/topics-resources/content/robot-introduces-technology-to-terroir" target="_blank">
+        <div class="card-tag">Vineyard / Autonomous</div>
+        <h3>Autonomous Vineyard Robot Completes Navigation &amp; Treatment Trial</h3>
+        <p>ASME reports on a vineyard robot completing a full autonomous trial — navigating vine rows, mapping terrain, monitoring grape development via imaging, and applying targeted treatments from an onboard nozzle system. The trial confirms commercial-readiness milestones: GPS-less row navigation, adaptive obstacle avoidance, and integration with variable-rate application maps. Watch this category: several units targeting commercial availability in 2026–2027.</p>
+        <div class="card-foot"><span>ASME</span><span>Jan 2026</span></div>
+      </a>
+    </div>
   </div>
 
-  <footer>Wine Intel &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Daily at 8:00 AM EST</footer>
+  <!-- INDUSTRY GENERAL -->
+  <div class="zone zone-industry">
+    <div class="zone-head"><div class="zone-label">Industry News</div><div class="zone-rule"></div></div>
+    <div class="cards">
+      <a class="card" href="https://wineindustryadvisor.com/2026/02/26/goldwater-unconstitutional-california-winery-mandate-must-end/" target="_blank">
+        <div class="card-tag">Regulation / California</div>
+        <h3>Goldwater Institute Challenges California Winery Mandate as Unconstitutional</h3>
+        <p>The Goldwater Institute filed a challenge against a California winery mandate, citing rising production costs, increased competition from domestic and imported wines, and shifting consumer patterns as context for the sector's fragility. The challenge targets regulatory requirements that disproportionately burden small and mid-size producers already navigating margin compression.</p>
+        <div class="card-foot"><span>Wine Industry Advisor</span><span>Feb 26, 2026</span></div>
+      </a>
+      <a class="card" href="https://dmwineline.substack.com/p/on-the-wineline-27-february-2026" target="_blank">
+        <div class="card-tag">Market / California</div>
+        <h3>California Winery Closures Accelerate — Gallo, Jackson Family Among Affected</h3>
+        <p>The WineLine's Feb 27 edition documents a grim stretch for California producers: Gallo closing Napa production and cutting jobs at four wineries, Jackson Family Wines reducing headcount, and several small producers shuttering entirely. The combination of tariff input costs, DTC traffic decline, and oversupply from 2022–2024 vintages is creating an accelerated consolidation environment.</p>
+        <div class="card-foot"><span>DM WineLine / Substack</span><span>Feb 27, 2026</span></div>
+      </a>
+      <a class="card" href="https://www.winebusiness.com/news/" target="_blank">
+        <div class="card-tag">On-Premise / Trends</div>
+        <h3>Bar Alcohol Sales Up 4% Since Jan 2025 — Wine's Share to Watch</h3>
+        <p>Bank of America card spending data shows on-premise alcohol sales at bars up 4% year-over-year since January 2025 — a positive signal for the broader category after post-pandemic softness. Whether wine captures share of that recovery or loses ground to spirits and RTDs remains a key question for on-premise channel strategy heading into summer 2026.</p>
+        <div class="card-foot"><span>Wine Business</span><span>Feb 27, 2026</span></div>
+      </a>
+    </div>
+  </div>
+
+  <footer>Wine Intel &nbsp;·&nbsp; For Amy &nbsp;·&nbsp; Week of Feb 21–28, 2026 &nbsp;·&nbsp; Daily reports begin March 1st</footer>
 </body>
 </html>
