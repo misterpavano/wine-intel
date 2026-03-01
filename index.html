@@ -58,6 +58,12 @@
     .card-foot{padding:10px 20px;font-size:11px;color:#aaa;display:flex;justify-content:space-between;border-top:1px solid #f0e8e0;}
     footer{background:#2d0a1a;color:#c9a07a;text-align:center;padding:20px 40px;font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;letter-spacing:0.05em;}
     @media(max-width:768px){header,.zone,.week-banner{padding:20px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
+    .zone-summary{background:#2d0a1a;padding:24px 40px;border-bottom:3px solid #7b2d44;}
+    .summary-label{font-family:'Cormorant Garamond',serif;font-size:13px;text-transform:uppercase;letter-spacing:0.25em;color:#c9a07a;margin-bottom:12px;}
+    .summary-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .summary-list li{font-size:13px;color:#f7f2ed;line-height:1.6;padding-left:16px;position:relative;}
+    .summary-list li::before{content:'—';position:absolute;left:0;color:#c9a07a;}
+    @media(max-width:768px){.zone-summary{padding:16px;}}
   </style>
 </head>
 <body>
@@ -71,6 +77,18 @@
     </div>
   </header>
   <div class="week-banner">Sunday afternoon edition — March 1st, 2026</div>
+
+  <div class="zone-summary">
+    <div class="summary-label">Today at a glance</div>
+    <ul class="summary-list">
+      <li><strong>M&amp;A / Suppliers:</strong> BevZero makes a loud play for low/no-alcohol winery clients as Jackson Family closes Carneros Hills and Scantrust consolidates bottle authentication in APAC — California's facility contraction is accelerating.</li>
+      <li><strong>Thermovinification:</strong> WBM's Zinfandel issue puts extraction timing science in the spotlight, while a new Nature study shows yeast lipid depletion at fermentation onset has direct implications for heat-processed musts.</li>
+      <li><strong>Microbial Stability:</strong> ProWein drives home the irreversibility of brett damage — "filtration removes cells, not the 4-EP" — and a peer-reviewed study links uncontrolled natural fermentation to structural microbial instability.</li>
+      <li><strong>Winery Automation:</strong> Precision vineyard tech hits commercial scale as Bonsai Robotics debuts autonomous row spraying at World Ag Expo, González Byass calls soil sensors "fundamental," and WBM finds CFOs are doubling down on technology even in a downturn.</li>
+      <li><strong>Industry General:</strong> Gallo closes Napa Ranch with 56 layoffs, Aloria Vineyards files Chapter 11 as US volume craters nearly 7M cases to 329M, and the Supreme Court voids Trump wine tariffs — freeing $175M in potential refunds.</li>
+      <li><strong>Competitor Intel:</strong> Lallemand's ML Prime bacteria earns an "incredible shortcut" write-up in WBM's trial column, Scott Labs lands another full-service supplier mention in craft fermentation press, and a French billionaire pours $270M into Treasury Wine Estates behind a premium revival play.</li>
+    </ul>
+  </div>
 
   <!-- M&A / SUPPLIERS -->
   <div class="zone zone-ma">
