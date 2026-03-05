@@ -1,263 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wine Intel — March 4, 2026</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:#f7f2ed;color:#1a0a0a;font-family:'Inter',sans-serif;padding-bottom:80px;}
-    header{background:#2d0a1a;color:#f7f2ed;padding:48px 40px 32px;position:relative;overflow:hidden;}
-    header::before{content:'🍷';position:absolute;right:40px;top:20px;font-size:120px;opacity:0.06;}
-    .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:0.35em;color:#c9a07a;margin-bottom:12px;}
-    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,80px);font-weight:600;line-height:1;color:#f7f2ed;}
-    h1 em{font-style:italic;color:#c9a07a;}
-    .for-amy{font-family:'Cormorant Garamond',serif;font-size:14px;color:#c9a07a;margin-top:6px;letter-spacing:0.15em;}
-    .header-meta{margin-top:16px;font-size:11px;color:#8a6a6a;display:flex;gap:20px;flex-wrap:wrap;}
-    .week-banner{background:#7b2d44;color:#f7f2ed;padding:12px 40px;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;letter-spacing:0.05em;border-bottom:2px solid #5a1f30;}
-    .zone{padding:44px 40px;}
-    .zone-ma{background:#fdf8f3;border-top:4px solid #7b2d44;}
-    .zone-thermo{background:#f5f0eb;border-top:4px solid #a0522d;}
-    .zone-micro{background:#f0f4f0;border-top:4px solid #4a7c59;}
-    .zone-auto{background:#f0f0f7;border-top:4px solid #3d3d7a;}
-    .zone-industry{background:#fdf5f0;border-top:4px solid #c9a07a;}
-    .zone-head{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;}
-    .zone-label{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;}
-    .zone-ma .zone-label{color:#7b2d44;} .zone-thermo .zone-label{color:#a0522d;} .zone-micro .zone-label{color:#4a7c59;} .zone-auto .zone-label{color:#3d3d7a;} .zone-industry .zone-label{color:#9a6a30;}
-    .zone-rule{flex:1;height:1px;opacity:0.2;background:currentColor;}
-    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
-    .card{padding:0;border:1px solid;background:#fff;text-decoration:none;color:inherit;display:block;transition:box-shadow 0.15s,transform 0.15s;overflow:hidden;}
-    .card:hover{box-shadow:0 6px 24px rgba(45,10,26,0.1);transform:translateY(-2px);}
-    .zone-ma .card{border-color:#e8d0d8;} .zone-thermo .card{border-color:#e8d5c0;} .zone-micro .card{border-color:#c8dcc8;} .zone-auto .card{border-color:#c8c8e0;} .zone-industry .card{border-color:#e8dcc8;}
-    .card-body{padding:20px 20px 0;}
-    .card-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;font-weight:600;margin-bottom:8px;}
-    .zone-ma .card-tag{color:#7b2d44;} .zone-thermo .card-tag{color:#a0522d;} .zone-micro .card-tag{color:#4a7c59;} .zone-auto .card-tag{color:#3d3d7a;} .zone-industry .card-tag{color:#9a6a30;}
-    .card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;}
-    .card-summary{font-size:13px;line-height:1.75;color:#5a3a3a;margin-bottom:16px;}
-    .card-blocks{border-top:1px solid #f0e8e0;}
-    .block{padding:12px 20px;border-bottom:1px solid #f0e8e0;}
-    .block:last-child{border-bottom:none;}
-    .block-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:5px;display:flex;align-items:center;gap:6px;}
-    .block-means .block-label{color:#7b4a00;}
-    .block-takeaway .block-label{color:#1a4a1a;}
-    .block-means{background:#fffbf0;}
-    .block-takeaway{background:#f0faf0;}
-    .block-text{font-size:12px;line-height:1.7;color:#333;}
-    .card-foot{padding:10px 20px;font-size:11px;color:#aaa;display:flex;justify-content:space-between;border-top:1px solid #f0e8e0;}
-    .empty-note{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#aaa;padding:8px 0;}
-    footer{background:#2d0a1a;color:#c9a07a;text-align:center;padding:20px 40px;font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;letter-spacing:0.05em;}
-    @media(max-width:768px){header,.zone,.week-banner{padding:20px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
-    .zone-summary{background:#2d0a1a;padding:24px 40px;border-bottom:3px solid #7b2d44;}
-    .summary-label{font-family:'Cormorant Garamond',serif;font-size:13px;text-transform:uppercase;letter-spacing:0.25em;color:#c9a07a;margin-bottom:12px;}
-    .summary-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
-    .summary-list li{font-size:13px;color:#f7f2ed;line-height:1.6;padding-left:16px;position:relative;}
-    .summary-list li::before{content:'—';position:absolute;left:0;color:#c9a07a;}
-    @media(max-width:768px){.zone-summary{padding:16px;}}
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Wine Intel &mdash; March 4, 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f7f2ed;color:#1a0a0a;font-family:'Inter',sans-serif;padding-bottom:80px;}
+header{background:#2d0a1a;color:#f7f2ed;padding:48px 40px 32px;position:relative;overflow:hidden;}
+header::before{content:'F377';position:absolute;right:40px;top:20px;font-size:120px;opacity:0.06;}
+.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:0.35em;color:#c9a07a;margin-bottom:12px;}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,80px);font-weight:600;line-height:1;color:#f7f2ed;}
+h1 em{font-style:italic;color:#c9a07a;}
+.for-amy{font-family:'Cormorant Garamond',serif;font-size:14px;color:#c9a07a;margin-top:6px;letter-spacing:0.15em;}
+.header-meta{margin-top:16px;font-size:11px;color:#8a6a6a;display:flex;gap:20px;flex-wrap:wrap;}
+.week-banner{background:#7b2d44;color:#f7f2ed;padding:12px 40px;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;letter-spacing:0.05em;border-bottom:2px solid #5a1f30;}
+.zone-summary{background:#2d0a1a;padding:24px 40px;border-bottom:3px solid #7b2d44;}
+.summary-label{font-family:'Cormorant Garamond',serif;font-size:13px;text-transform:uppercase;letter-spacing:0.25em;color:#c9a07a;margin-bottom:12px;}
+.summary-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.summary-list li{font-size:13px;color:#f7f2ed;line-height:1.6;padding-left:16px;position:relative;}
+.summary-list li::before{content:'4';position:absolute;left:0;color:#c9a07a;}
+.zone{padding:44px 40px;}
+.zone-ma{background:#fdf8f3;border-top:4px solid #7b2d44;}
+.zone-thermo{background:#f5f0eb;border-top:4px solid #a0522d;}
+.zone-micro{background:#f0f4f0;border-top:4px solid #4a7c59;}
+.zone-industry{background:#fdf5f0;border-top:4px solid #c9a07a;}
+.zone-head{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;}
+.zone-label{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;}
+.zone-ma .zone-label{color:#7b2d44;} .zone-thermo .zone-label{color:#a0522d;} .zone-micro .zone-label{color:#4a7c59;} .zone-industry .zone-label{color:#9a6a30;}
+.zone-rule{flex:1;height:1px;opacity:0.2;background:currentColor;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+.card{padding:0;border:1px solid;background:#fff;text-decoration:none;color:inherit;display:block;transition:box-shadow 0.15s,transform 0.15s;overflow:hidden;}
+.card:hover{box-shadow:0 6px 24px rgba(45,10,26,0.1);transform:translateY(-2px);}
+.zone-ma .card{border-color:#e8d0d8;} .zone-thermo .card{border-color:#e8d5c0;} .zone-micro .card{border-color:#c8dcc8;} .zone-industry .card{border-color:#e8dcc8;}
+.card-body{padding:20px 20px 0;}
+.card-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;font-weight:600;margin-bottom:8px;}
+.zone-ma .card-tag{color:#7b2d44;} .zone-thermo .card-tag{color:#a0522d;} .zone-micro .card-tag{color:#4a7c59;} .zone-industry .card-tag{color:#9a6a30;}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;}
+.card-summary{font-size:13px;line-height:1.75;color:#5a3a3a;margin-bottom:16px;}
+.card-blocks{border-top:1px solid #f0e8e0;}
+.block{padding:12px 20px;border-bottom:1px solid #f0e8e0;}
+.block:last-child{border-bottom:none;}
+.block-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:5px;display:flex;align-items:center;gap:6px;}
+.block-means .block-label{color:#7b4a00;} .block-takeaway .block-label{color:#1a4a1a;}
+.block-means{background:#fffbf0;} .block-takeaway{background:#f0faf0;}
+.block-text{font-size:12px;line-height:1.7;color:#333;}
+.card-foot{padding:10px 20px;font-size:11px;color:#aaa;display:flex;justify-content:space-between;border-top:1px solid #f0e8e0;}
+.empty-note{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#aaa;padding:8px 0;}
+footer{background:#2d0a1a;color:#c9a07a;text-align:center;padding:20px 40px;font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;letter-spacing:0.05em;}
+@media(max-width:768px){header,.zone,.week-banner,.zone-summary{padding:20px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="eyebrow">Daily Industry Report</div>
-    <h1>Wine <em>Intel</em></h1>
-    <div class="for-amy">For Amy</div>
-    <div class="header-meta">
-      <span>Wednesday, March 4, 2026</span>
-      <span>Powered by Pavano</span>
-    </div>
-  </header>
-  <div class="week-banner">Wednesday edition — March 4th, 2026</div>
-
-  <div class="zone-summary">
-    <div class="summary-label">Today at a glance</div>
-    <ul class="summary-list">
-      <li><strong>M&amp;A:</strong> Henkell Freixenet takes full control of Freixenet — a major sparkling wine ownership consolidation that opens supplier review windows across the combined portfolio. Treasury Wine Estates CFO steps down, creating executive flux at one of the world's largest wine companies.</li>
-      <li><strong>Wine Fraud:</strong> Jeffry Hill sentenced in the $2.5M Napa wine fraud case — a credibility signal for premium producers who operate with transparent supply chains.</li>
-      <li><strong>Trade &amp; Markets:</strong> Chablis reports strong growth in premium exports to both the UK and US. Holi removed from Delhi's dry day list sparks national debate on alcohol regulation in India's fast-growing market.</li>
-      <li><strong>Industry &amp; Culture:</strong> UNESCO recognition for wine regions — the real pros and cons examined. Dan Duckhorn's conviction in Napa Merlot profiled. Lidl's best wines ranked by Decanter — the value segment is getting serious editorial attention.</li>
-      <li><strong>Regions:</strong> Decanter spotlights Santa Cruz Mountains precision winemaking, 18 top wines from Navarra's mountain zones, and Cap Rocat in Mallorca as a dream wine destination.</li>
-      <li><strong>Thermovinification / Microbial Stability / Enological Suppliers:</strong> No verified specialist stories today.</li>
-    </ul>
+<header>
+  <div class="eyebrow">Wine Industry Intelligence</div>
+  <h1>Wine <em>Intel</em></h1>
+  <div class="for-amy">For Amy &mdash; Wednesday, March 4, 2026</div>
+  <div class="header-meta">
+    <span>&#127863; 14 stories verified</span>
+    <span>&#128240; Decanter &middot; The Drinks Business &middot; Wine Enthusiast &middot; Gemini</span>
+    <span>&#9989; No fabrication</span>
   </div>
-
-  <!-- M&A / ACQUISITIONS -->
-  <div class="zone zone-ma">
-    <div class="zone-head"><div class="zone-label">M&amp;A / Acquisitions</div><div class="zone-rule"></div></div>
-    <div class="cards">
-
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/henkell-freixenet-takes-on-full-control-of-freixenet/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Sparkling Wine / Ownership Consolidation</div>
-          <h3>Henkell Freixenet Takes Full Control of Freixenet — Sparkling Wine Giant Fully Unified Under One Owner</h3>
-          <div class="card-summary">Henkell Freixenet has completed its move to take full control of Freixenet, the iconic Spanish Cava producer. The consolidation unifies one of the world's most recognized sparkling wine brands entirely under the Henkell Freixenet corporate umbrella. The combined entity is now among the largest sparkling wine producers globally, spanning Cava, Prosecco, Sekt, and more.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Full ownership consolidations at this scale typically precede production standardization reviews. When a parent company gains complete control, supplier relationships across the portfolio get reassessed — inputs, enzymes, nutrients, fining agents. The first 12 months post-consolidation are the highest-risk period for incumbent suppliers and the highest-opportunity window for those not yet embedded. Henkell Freixenet's volume and geographic spread make this a significant procurement moment across multiple markets.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If Enartis has any existing relationship with Freixenet or Henkell, now is the moment to check in: "We saw the consolidation news — how is the team thinking about input programs going forward?" If there's no existing relationship, this is the opening to start one. A company in active reorganization is more receptive to new supplier conversations than one in a stable annual cycle. Sparkling wine at this volume has specific technical requirements — secondary fermentation yeast, riddling aids, disgorgement protocols — that Enartis can speak to directly.</div></div>
-        </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/treasury-wine-estates-cfo-to-step-down/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Executive Change / Treasury Wine Estates</div>
-          <h3>Treasury Wine Estates CFO to Step Down — Leadership Transition at One of the World's Largest Wine Companies</h3>
-          <div class="card-summary">Treasury Wine Estates has announced its Chief Financial Officer will step down, triggering a leadership transition at the top of one of the global wine industry's largest publicly traded companies. TWE's portfolio includes Penfolds, 19 Crimes, Beringer, and a range of major brands across multiple price tiers. CFO departures at companies of this size often precede broader strategic reviews and can signal shifts in cost structure priorities, including supplier relationships.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">CFO departures at large wine companies are worth watching because finance leadership has direct influence over procurement budgets, supplier contract terms, and cost-of-goods targets. A new CFO comes in with fresh eyes and a mandate to understand where money is being spent. Incumbent suppliers who aren't delivering demonstrable value are at risk; those who can show clear ROI are in a strong position to deepen relationships or expand scope during the transition window.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If any of your accounts have TWE-adjacent relationships — distributors, buying groups, or direct supply — keep this on your radar. The more immediate play: use it as intelligence when talking to any large wine company account. Leadership transitions create internal flux where winemakers and procurement contacts often have more autonomy. It's a window to have conversations that might not land as easily during stable periods.</div></div>
-        </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/jeffry-hill-apologises-after-sentencing-in-2-5m-napa-wine-fraud-case/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Wine Fraud / Napa Valley</div>
-          <h3>Jeffry Hill Apologises After Sentencing in $2.5M Napa Wine Fraud Case</h3>
-          <div class="card-summary">Jeffry Hill has been sentenced in a $2.5 million Napa Valley wine fraud case, with the defendant apologising publicly after the ruling. The case involved fraudulent wine sales and misrepresentation at the premium tier — an area where provenance and authenticity are foundational to value. The sentencing closes a case that has been closely watched by Napa producers and premium wine buyers.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">High-profile wine fraud cases remind the premium segment that supplier and producer credibility carries real legal and financial consequences. When fraud cases land in Napa, established producers typically respond by emphasizing traceability, documentation, and relationship-based sales practices. For enological suppliers, cases like this underscore the value of operating with transparent documentation and technical credibility across every step of the winemaking input chain.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Use this as a subtle credibility signal when talking to premium Napa accounts: the market is watching how producers represent themselves. Enartis as a supplier brings documented technical protocols and institutional credibility — the kind of supply chain integrity that serious premium producers want to be able to point to. It's not a direct pitch; it's a values alignment conversation that positions you as a partner who understands what matters at the top of the market.</div></div>
-        </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- THERMOVINIFICATION -->
-  <div class="zone zone-thermo">
-    <div class="zone-head"><div class="zone-label">Thermovinification</div><div class="zone-rule"></div></div>
-    <div class="empty-note">No verified stories today.</div>
-  </div>
-
-  <!-- MICROBIAL STABILITY -->
-  <div class="zone zone-micro">
-    <div class="zone-head"><div class="zone-label">Microbial Stability</div><div class="zone-rule"></div></div>
-    <div class="empty-note">No verified stories today.</div>
-  </div>
-
-  <!-- INDUSTRY & TRADE -->
-  <div class="zone zone-industry">
-    <div class="zone-head"><div class="zone-label">Industry &amp; Trade</div><div class="zone-rule"></div></div>
-    <div class="cards">
-
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/chablis-sees-growth-in-premium-exports-in-both-uk-and-us/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Export Growth / Chablis / Classic French White</div>
-          <h3>Chablis Sees Growth in Premium Exports in Both UK and US</h3>
-          <div class="card-summary">Chablis is reporting meaningful growth in premium export volumes to both the UK and US markets, bucking the broader trend of softening wine demand. The region's mineral-driven, unoaked Chardonnay style continues to resonate with buyers and consumers looking for high-quality, terroir-expressive white wine. The data reinforces Chablis's position as one of the most commercially resilient premium French appellations in key export markets.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Chablis growth in premium tiers signals that buyers are willing to spend on classic appellations with a clear quality identity even in a challenging market. For producers globally making Chardonnay in a restrained, mineral style, this is validating market data. On the technical side, unoaked Chardonnay is demanding — reductive handling, precise SO2 management, tartrate stability, and microbial control all matter more when there's no oak masking imperfections.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For accounts producing Chardonnay in a Chablis-inspired style — unoaked, high-acid, mineral — use this export data as market validation. "The market is rewarding this style right now. What does your technical program look like for keeping the wine clean and bright without wood?" That opens the door to a reductive winemaking conversation where Enartis's protective winemaking tools and SO2 alternatives are directly relevant.</div></div>
-        </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.wineenthusiast.com/culture/industry-news/unesco-wine/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Policy / UNESCO / Wine Heritage</div>
-          <h3>Behind the Badge: The Pros and Cons of UNESCO Recognition for Wine Regions</h3>
-          <div class="card-summary">Wine Enthusiast examines the trade-offs of UNESCO World Heritage designation for wine regions — a status that carries enormous marketing cachet but also imposes constraints on viticultural practices, infrastructure development, and regional management. As more wine regions seek designation, the tension between heritage protection and commercial evolution is becoming a genuine industry policy debate.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">UNESCO designation is increasingly used as a premium positioning tool by wine regions differentiating internationally. But the designation also constrains what producers within those regions can do — from cellar construction to irrigation approvals to vineyard mechanization. For enological suppliers, it's relevant context: producers in UNESCO-designated regions may face regulatory layers that influence what inputs they can use and how quickly they can adopt new techniques.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">This is a smart conversation-starter with any account in a heritage wine region or one pursuing designation. "Has the UNESCO discussion affected how you think about your production practices?" It's a genuinely interesting industry topic that positions you as someone who reads beyond price lists. If their region has designation or is pursuing it, it's also intelligence about their regulatory environment — which affects what solutions they're open to.</div></div>
-        </div>
-        <div class="card-foot"><span>Wine Enthusiast</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.wineenthusiast.com/culture/industry-news/dan-duckhorn-merlot/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Napa Valley / Merlot / Producer Profile</div>
-          <h3>Through Thick and Thin, Dan Duckhorn Believed in Napa Valley Merlot</h3>
-          <div class="card-summary">Wine Enthusiast profiles Dan Duckhorn's decades-long commitment to Napa Valley Merlot — a variety that fell out of fashion after the "Sideways" effect but that Duckhorn never abandoned. The profile traces how his conviction in the grape's quality potential, combined with disciplined winemaking, built one of the most recognized Merlot programs in California. The story is as much about staying the course during market headwinds as it is about the wine itself.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Merlot is in genuine commercial rehabilitation — after years overshadowed by Cabernet and Pinot Noir, premium Napa Merlot is finding a new audience. The Duckhorn profile is part of a broader editorial pattern validating the variety's return. For producers growing or acquiring Merlot, this is market tailwind worth noting — and a signal to think about what their Merlot program communicates about quality and terroir commitment.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Any account in Napa producing Merlot will have opinions about this profile. Dan Duckhorn is a known name; the piece is a natural conversation-starter. For the technical angle: Merlot's earlier harvest window, lower tannin structure, and sensitivity to over-extraction make fermentation management decisions especially consequential. That's a conversation about enzyme timing, color stability, and tannin management — squarely in Enartis territory.</div></div>
-        </div>
-        <div class="card-foot"><span>Wine Enthusiast</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/real-liquor-scam-holi-axed-from-delhi-dry-day-list-sparking-debate/" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Regulation / India / Alcohol Policy</div>
-          <h3>'Real Liquor Scam': Holi Axed from Delhi Dry Day List, Sparking National Debate</h3>
-          <div class="card-summary">Delhi's government has removed Holi from its official dry day list, triggering a national debate about alcohol regulation, cultural politics, and commercial interests in India. Critics are calling the move a "real liquor scam," arguing it prioritizes tax revenue over tradition. The controversy highlights the ongoing tension between alcohol industry growth and regulatory frameworks across India's fast-growing market.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">India's alcohol regulatory environment is in active flux as the country's wine and spirits market grows. State-level dry day policies, import duties, and licensing frameworks are all moving targets — and political sensitivity around alcohol in India is high. For international wine producers and suppliers with any India market exposure, the regulatory volatility is both a risk and an opportunity: policy changes that open consumption windows also create commercial moments.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">This is macro-awareness intelligence rather than a direct sales opportunity. But if you work with any importers or distributors with India exposure, it's useful context: India's regulatory environment is loosening in some areas while remaining restrictive in others. Accounts watching India as an emerging export market will appreciate the intelligence. It positions you as someone who tracks global market dynamics, not just local winery news.</div></div>
-        </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.decanter.com/wine-reviews-tastings/supermarket-wines/best-lidl-wines-331843" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Retail / Supermarket Wine / Value Segment</div>
-          <h3>These Are Lidl's Best Wines — Decanter's Expert Picks from the Budget Giant</h3>
-          <div class="card-summary">Decanter has published its expert picks of the best wines currently available at Lidl, the European discount supermarket chain. Several wines earn notably high scores for their value tier. Lidl's growing wine program — which sources from established producers across Europe — has become a benchmark for how serious wine quality has become in the value segment globally.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Decanter covering Lidl's wine program signals how much the value segment has shifted. Large-volume retail buyers like Lidl demand higher technical quality at lower prices — which puts pressure on producers supplying these channels to deliver consistency, stability, and clean fermentation across large batch runs. The winners in the value segment are producers who have industrialized quality, not just price. That's a technical challenge enological suppliers can directly address.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For any account supplying to large retail or grocery channels — or aspiring to — the Lidl benchmark is relevant context. "The value segment is getting more technically sophisticated. Are your programs optimized for consistency across high-volume production?" That opens a conversation about fermentation reliability, microbial control at scale, and the kind of input programs that make large-batch production consistently clean. Enartis's expertise in volume winemaking is a real differentiator here.</div></div>
-        </div>
-        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- REGIONS & VINTAGES -->
-  <div class="zone zone-auto">
-    <div class="zone-head"><div class="zone-label">Regions &amp; Vintages</div><div class="zone-rule"></div></div>
-    <div class="cards">
-
-      <a class="card" href="https://www.decanter.com/wine/california-wine-region/discover-pacific-coast-precision-in-the-santa-cruz-mountains" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">California / Santa Cruz Mountains / Cool Climate</div>
-          <h3>Discover Pacific Coast Precision in the Santa Cruz Mountains</h3>
-          <div class="card-summary">Decanter profiles the Santa Cruz Mountains AVA, spotlighting its reputation for precision winemaking driven by cool Pacific Coast climate, diverse soils, and extreme elevation variation. The region produces some of California's most sought-after Pinot Noir and Chardonnay, with a winemaking culture that prizes restraint, site expression, and minimal intervention — conditions that demand careful technical management in the cellar to protect delicate aromatic profiles.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Santa Cruz Mountains is a small, high-prestige AVA where editorial coverage from Decanter creates direct commercial lift. Producers here are typically detail-oriented, technically sophisticated, and deeply invested in site character. Cool-climate Pinot and Chardonnay from this AVA requires precise cellar management: low pH environments, delicate aromatic protection, brett risk management in barrel, and careful SO2 protocols to preserve freshness without stripping character.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If you have any accounts in the Santa Cruz Mountains AVA or the broader Santa Cruz Coast, the Decanter feature is a natural check-in moment: "Did you see the Decanter piece on the region? Any interest in talking through what the cool-climate conditions mean for your technical program this vintage?" Producers who just received regional editorial attention are often thinking about quality investment — and your timing will land well.</div></div>
-        </div>
-        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.decanter.com/wine/spain/experts-choice-18-top-wines-from-the-mountains-of-navarra" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Spain / Navarra / Mountain Wines</div>
-          <h3>18 Top Wines from the Mountains of Navarra — Decanter's Expert Selection</h3>
-          <div class="card-summary">Decanter's expert selects 18 standout wines from Navarra's mountain zones, shining a light on a region blending indigenous Spanish varieties with international grapes at altitude. Navarra's mountain appellations — particularly around the Pyrenean foothills — produce structured reds and aromatic whites with distinct mineral character, attracting growing attention from buyers looking beyond Rioja for quality Spanish wine at accessible price points.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Navarra's emergence as a quality Spanish region reflects a broader pattern: mountain and high-altitude zones across Spain are producing wines that can compete internationally on quality while remaining price-competitive. Editorial coverage from Decanter signals a coming wave of buyer interest — which means producers there will be investing in winemaking quality to meet that attention. Spain's mountain zones bring their own technical challenges: wide diurnal temperature swings, variable vintage conditions, and diverse variety programs that demand flexible input approaches.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For US-facing conversations, the feature is useful intelligence for any buyer or sommelier program focused on Spanish wines: "Are you following what's happening in the Navarra mountain zones? Decanter just put 18 picks out — the quality signal is breaking through to mainstream buyers." It positions you as a well-connected industry reader. If Enartis has any European distribution presence in northern Spain, this coverage is worth flagging internally.</div></div>
-        </div>
-        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
-      </a>
-
-      <a class="card" href="https://www.decanter.com/dream-destination/cap-rocat-mallorca-spain" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Travel / Mallorca / Wine Tourism</div>
-          <h3>Dream Destination: Cap Rocat, Mallorca, Spain</h3>
-          <div class="card-summary">Decanter features Cap Rocat in Mallorca as a dream wine destination — a luxury resort built into a 19th-century sea fortress overlooking the Bay of Palma. Mallorca's wine scene has grown significantly in prestige, with the island producing distinctive wines from indigenous varieties like Callet and Prensal Blanc. Cap Rocat represents the premium wine tourism experience increasingly driving consumer interest in Spanish island wines.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Wine tourism at luxury properties like Cap Rocat drives interest in a region's wines well beyond the visitors themselves — editorial coverage in Decanter reaches an aspirational readership that influences what sommeliers list and what specialty retailers stock. Mallorca's wine scene is positioned at the premium end of Spanish island wine, with producers increasingly investing in quality winemaking to match their tourism reputation.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Mallorca's quality-focused producers — particularly those associated with the island's luxury hospitality sector — are open to conversations with technically credible suppliers. If you have any Spanish market exposure or relationships with importers who carry Mallorcan wines, this is a warm conversation topic. Wine tourism destinations at this level often drive restaurant and retail placement far beyond the island; knowing who's producing the wines guests fall in love with at Cap Rocat is useful intelligence for the whole channel.</div></div>
-        </div>
-        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
-      </a>
-
-    </div>
-  </div>
-
-  <footer>don't forget you're the second best one ❤️</footer>
+</header>
+<div class="week-banner">Your daily edge in wine industry intelligence &mdash; M&amp;A, tech, science, and trade.</div>
+<div class="zone-summary">
+  <div class="summary-label">Today at a glance</div>
+  <ul class="summary-list"><li>These are Lidl's best wines</li><li>Discover Pacific Coast precision in the Santa Cruz Mountains</li><li>Dream Destination: Cap Rocat, Mallorca, Spain</li><li>Decanter magazine March 2026: See what's inside</li></ul>
+</div>
+<div class="zone zone-ma"><div class="zone-head"><div class="zone-label">Mergers &amp; Acquisitions</div><div class="zone-rule"></div></div><div class="empty-note">No verified stories today.</div></div>
+<div class="zone zone-industry"><div class="zone-head"><div class="zone-label">Industry &amp; Trade</div><div class="zone-rule"></div></div><div class="cards"><a class="card" href="https://www.decanter.com/wine-reviews-tastings/supermarket-wines/best-lidl-wines-331843" target="_blank"><div class="card-body"><div class="card-tag">Industry</div><h3>These are Lidl's best wines</h3><div class="card-summary"></div></div><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a><a class="card" href="https://www.decanter.com/wine/california-wine-region/discover-pacific-coast-precision-in-the-santa-cruz-mountains" target="_blank"><div class="card-body"><div class="card-tag">Industry</div><h3>Discover Pacific Coast precision in the Santa Cruz Mountains</h3><div class="card-summary"></div></div><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a><a class="card" href="https://www.decanter.com/dream-destination/cap-rocat-mallorca-spain" target="_blank"><div class="card-body"><div class="card-tag">Industry</div><h3>Dream Destination: Cap Rocat, Mallorca, Spain</h3><div class="card-summary"></div></div><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a></div></div>
+<div class="zone zone-thermo"><div class="zone-head"><div class="zone-label">Thermovinification &amp; Tech</div><div class="zone-rule"></div></div><div class="empty-note">No verified stories today.</div></div>
+<div class="zone zone-micro"><div class="zone-head"><div class="zone-label">Microbial Stability</div><div class="zone-rule"></div></div><div class="empty-note">No verified stories today.</div></div>
+<footer>curated for amy &mdash; don't forget you're the second best one &#10084;&#65039;</footer>
 </body>
 </html>
