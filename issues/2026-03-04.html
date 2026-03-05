@@ -4,111 +4,165 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Wine Intel &mdash; March 4, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#F9F4EF;
-  --surface:#fff;
-  --wine:#7B1D35;
-  --wine2:#5A1326;
-  --pink:#E8426A;
-  --gold:#C9962A;
-  --ink:#130508;
-  --ink2:#4A2030;
-  --muted:#9A7080;
-  --rule:#EDE0D8;
+  --bg:#F7F3EE;
+  --s:#fff;
+  --wine:#6B1020;
+  --rose:#C94060;
+  --sage:#5A7A60;
+  --ink:#110408;
+  --ink2:#3D1520;
+  --muted:#9A7A80;
+  --rule:#E5D8D0;
 }
 body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1}
 
-/* ── HEADER ── */
-.hdr{background:var(--wine2);padding:0}
-.hdr-top{display:flex;justify-content:space-between;align-items:center;padding:10px 40px;border-bottom:1px solid rgba(255,255,255,0.07)}
-.hdr-top span{font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
-.hdr-top b{color:var(--gold)}
-.hdr-body{padding:52px 40px 44px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
-.hdr-left{}
-.hdr-kicker{font-size:9px;font-weight:800;letter-spacing:0.5em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:10px}
-.hdr-title{font-size:clamp(72px,9vw,120px);font-weight:900;line-height:0.85;letter-spacing:-0.05em;color:#fff}
-.hdr-title em{color:var(--pink);font-style:normal}
-.hdr-right{text-align:right;padding-bottom:6px}
-.hdr-for{font-size:11px;color:rgba(255,255,255,0.3);margin-bottom:5px}
-.hdr-for strong{color:rgba(255,255,255,0.7)}
-.hdr-date{font-size:12px;font-weight:500;color:rgba(255,255,255,0.25);letter-spacing:0.04em}
-.hdr-bar{height:3px;background:linear-gradient(to right,var(--pink) 0%,var(--gold) 50%,transparent 100%)}
+/* HEADER */
+.hdr{background:var(--wine);color:#fff}
+.hdr-top{padding:9px 44px;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between}
+.hdr-top span{font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.28)}
+.hdr-main{padding:52px 44px 44px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px}
+.hdr-eyebrow{font-size:9px;font-weight:800;letter-spacing:0.5em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:10px}
+.hdr-wordmark{font-size:clamp(76px,9.5vw,124px);font-weight:900;line-height:0.84;letter-spacing:-0.05em}
+.hdr-wordmark em{color:var(--rose);font-style:italic}
+.hdr-right{text-align:right;padding-bottom:8px}
+.hdr-for{font-size:10px;color:rgba(255,255,255,0.3);margin-bottom:5px;letter-spacing:0.08em}
+.hdr-for b{color:rgba(255,255,255,0.75);font-weight:700}
+.hdr-date{font-size:11px;font-weight:500;color:rgba(255,255,255,0.25)}
+.hdr-stripe{height:3px;background:linear-gradient(90deg,var(--rose) 0%,#E8A04C 55%,transparent 100%)}
 
-/* ── GLANCE ── */
-.glance{background:var(--wine2);padding:0 40px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,0.05)}
-.gi{padding:14px 20px 14px 0;border-right:1px solid rgba(255,255,255,0.05);font-size:11.5px;color:rgba(255,255,255,0.4);line-height:1.5;display:flex;gap:8px;align-items:flex-start}
-.gi:last-child{border-right:none}
-.gi-dot{color:var(--pink);flex-shrink:0;font-size:12px;line-height:1.5}
+/* TICKER */
+.ticker{background:#0E0408;padding:11px 44px;display:flex;gap:32px;overflow:hidden;border-bottom:1px solid #1a0810}
+.tick{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:rgba(255,255,255,0.3)}
+.tick b{color:var(--rose)}
+.tick-count{color:rgba(255,255,255,0.55)}
 
-/* ── LAYOUT ── */
-.page{max-width:1160px;margin:0 auto;padding:0 40px 80px}
-.zone{margin-top:52px}
+/* LAYOUT */
+.page{max-width:1180px;margin:0 auto;padding:0 44px 96px}
+.zone{margin-top:56px}
+.zone-sm{margin-top:40px}
 
-/* ── ZONE HEADER ── */
-.zone-hd{display:flex;align-items:center;gap:10px;margin-bottom:2px;padding-bottom:10px;border-bottom:1px solid var(--rule);position:relative}
-.zone-hd::after{content:'';position:absolute;bottom:-1px;left:0;width:48px;height:2px;background:var(--pink)}
-.zone-hd span:first-child{font-size:18px}
-.zone-lbl{font-size:10px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted)}
-.nil{font-size:13px;font-style:italic;color:var(--muted);padding:16px 0}
+/* ZONE HEADER */
+.zh{display:flex;align-items:baseline;gap:12px;margin-bottom:2px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.zh-label{font-size:10px;font-weight:900;letter-spacing:0.32em;text-transform:uppercase;color:var(--ink)}
+.zh-sub{font-size:10px;font-weight:400;color:var(--muted);font-style:italic}
+.nil{font-size:13px;color:var(--muted);font-style:italic;padding:16px 0}
 
-/* ── CARDS ── */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1px;background:var(--rule);margin-top:0}
-.card{background:var(--surface);padding:24px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:background 0.1s}
-.card:hover{background:#FDF7F2}
-.card h3{font-size:15px;font-weight:700;line-height:1.32;letter-spacing:-0.01em;color:var(--ink)}
-.card p{font-size:12.5px;line-height:1.72;color:var(--ink2);font-weight:400}
-.tag-block{font-size:11.5px;line-height:1.55;padding:8px 12px;font-weight:500}
-.means{background:#FFF9EE;border-left:2px solid var(--gold);color:#5A3A00}
-.take{background:#FFF0F3;border-left:2px solid var(--pink);color:#5A1326}
-.card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:9.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+/* HERO + REST GRID */
+.card-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:1px;background:var(--rule);margin-top:1px}
+.rest-grid{display:grid;grid-template-rows:1fr 1fr;gap:1px;background:var(--rule)}
 
-/* ── FOOTER ── */
-footer{background:var(--wine2);margin-top:72px;padding:28px 40px;border-top:3px solid var(--pink);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.foot-brand{font-size:18px;font-weight:900;letter-spacing:-0.03em;color:#fff}
-.foot-brand em{color:var(--pink);font-style:normal}
-.foot-note{font-size:10px;color:rgba(255,255,255,0.25);margin-top:4px}
-.foot-love{font-size:11px;font-weight:500;color:rgba(255,255,255,0.3);text-align:right;line-height:1.7}
+/* FLAT GRID (small zones) */
+.flat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--rule);margin-top:1px}
 
-@media(max-width:900px){.glance{grid-template-columns:1fr 1fr}.hdr-body{flex-direction:column;align-items:flex-start}.hdr-right{text-align:left}}
-@media(max-width:620px){.hdr-top,.hdr-body,.glance,.page,footer{padding-left:20px;padding-right:20px}.hdr-title{font-size:68px}.glance{grid-template-columns:1fr}.gi{border-right:none;border-bottom:1px solid rgba(255,255,255,0.05)}.cards{grid-template-columns:1fr}}
+/* CARDS */
+.card{background:var(--s);padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:background 0.1s}
+.card:hover{background:#FBF6F1}
+.card h3{font-size:15px;font-weight:700;line-height:1.33;letter-spacing:-0.012em;color:var(--ink)}
+.card.hero h3{font-size:22px;font-weight:800;letter-spacing:-0.025em;line-height:1.18}
+.card p{font-size:12.5px;line-height:1.75;color:var(--ink2);font-weight:400}
+.pill{font-size:11px;font-weight:500;line-height:1.55;padding:7px 11px;border-radius:2px}
+.pill-m{background:#FEFBF0;border-left:2px solid #C9962A;color:#4A3000}
+.pill-t{background:#FDF3F5;border-left:2px solid var(--rose);color:#4A1020}
+.card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+
+/* FOOTER */
+.foot{background:var(--ink);padding:28px 44px;margin-top:80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;border-top:3px solid var(--rose)}
+.foot-brand{font-size:17px;font-weight:900;letter-spacing:-0.03em;color:#fff}
+.foot-brand em{color:var(--rose);font-style:italic}
+.foot-meta{font-size:9px;color:rgba(255,255,255,0.2);margin-top:4px;font-weight:500;letter-spacing:0.05em}
+.foot-r{text-align:right;font-size:10px;color:rgba(255,255,255,0.25);line-height:1.8}
+
+@media(max-width:860px){.card-grid,.rest-grid{grid-template-columns:1fr}.hdr-main{grid-template-columns:1fr}.hdr-right{text-align:left}}
+@media(max-width:600px){.hdr-top,.hdr-main,.ticker,.page,.foot{padding-left:20px;padding-right:20px}.hdr-wordmark{font-size:68px}.flat-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <header class="hdr">
   <div class="hdr-top">
     <span>wine industry intelligence</span>
-    <span><b>Wine Intel</b> &middot; Wednesday, March 4, 2026</span>
+    <span>Wednesday &middot; March 4, 2026</span>
   </div>
-  <div class="hdr-body">
-    <div class="hdr-left">
-      <div class="hdr-kicker">Daily brief &middot; 21 stories</div>
-      <div class="hdr-title">Wine <em>Intel</em></div>
+  <div class="hdr-main">
+    <div>
+      <div class="hdr-eyebrow">daily brief &middot; for amy</div>
+      <div class="hdr-wordmark">Wine <em>Intel</em></div>
     </div>
     <div class="hdr-right">
-      <div class="hdr-for">for <strong>Amy</strong></div>
-      <div class="hdr-date">Wednesday, March 4, 2026</div>
+      <div class="hdr-for">curated for <b>Amy</b></div>
+      <div class="hdr-date">March 4, 2026</div>
     </div>
   </div>
-  <div class="hdr-bar"></div>
+  <div class="hdr-stripe"></div>
 </header>
-<div class="glance"><div class="gi"><span class="gi-dot">&#8212;</span>The Wine Group Poised to Expand Portfolio with Agreement to Acquire Wine Br</div><div class="gi"><span class="gi-dot">&#8212;</span>Discover Pacific Coast precision in the Santa Cruz Mountains</div><div class="gi"><span class="gi-dot">&#8212;</span>Dream Destination: Cap Rocat, Mallorca, Spain</div><div class="gi"><span class="gi-dot">&#8212;</span>Decanter magazine March 2026: See what's inside</div></div>
 
-<div class="page">
-  <div class="zone"><div class="zone-hd"><span>&#128握;</span><span class="zone-lbl">M&amp;A</span></div><div class="cards"><a class="card" href="https://www.thedrinksbusiness.com/2025/04/the-wine-group-to-acquire-six-brands-from-constellation/" target="_blank"><h3>The Wine Group Poised to Expand Portfolio with Agreement to Acquire Wine Brands and Production Facilities from Constellation Brands</h3><p>The Wine Group entered an agreement to acquire several wine brands, three facilities, and approximately 6,600 vineyard acres from Constellation Brands, with the deal completing in early 2026. This significant transaction is expected to dive&hellip;</p><div class="card-foot"><span>The Drinks Business / The Wine Group</span><span>2026-03-04</span></div></a></div></div>
-  <div class="zone"><div class="zone-hd"><span>&#128240;</span><span class="zone-lbl">Industry &amp; Trade</span></div><div class="cards"><a class="card" href="https://www.decanter.com/wine/california-wine-region/discover-pacific-coast-precision-in-the-santa-cruz-mountains" target="_blank"><h3>Discover Pacific Coast precision in the Santa Cruz Mountains</h3><p></p><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a><a class="card" href="https://www.decanter.com/dream-destination/cap-rocat-mallorca-spain" target="_blank"><h3>Dream Destination: Cap Rocat, Mallorca, Spain</h3><p></p><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a><a class="card" href="https://www.decanter.com/magazine/decanter-magazine-march-2026-see-whats-inside" target="_blank"><h3>Decanter magazine March 2026: See what's inside</h3><p></p><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a><a class="card" href="https://www.decanter.com/wine/spain/experts-choice-18-top-wines-from-the-mountains-of-navarra" target="_blank"><h3>Our expert selects 18 wines from the mountains of Navarra that you need to taste</h3><p></p><div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div></a></div></div>
-  <div class="zone"><div class="zone-hd"><span>&#128293;</span><span class="zone-lbl">Tech &amp; Process</span></div><div class="cards"><a class="card" href="https://www.pellenc.com/en-gb/our-products/from-the-vineyard-to-the-winery/winemaking/thermovinification/flash-detente" target="_blank"><h3>Best Practices for Red Wines After Flash Détente</h3><p>Flash détente, a thermovinification process, utilizes high temperature, vacuum, and rapid cooling to efficiently extract color and flavor from grapes. This technique minimizes skin contact time and inactivates undesirable enzymes, making it&hellip;</p><div class="card-foot"><span>Scott Laboratories</span><span>2026-03-02</span></div></a></div></div>
-  <div class="zone"><div class="zone-hd"><span>&#128300;</span><span class="zone-lbl">Microbial</span></div><div class="cards"><p class="nil">nothing verified today.</p></div></div>
+<div class="ticker">
+  <div class="tick">&#127863; <b>Wine Intel</b></div>
+  <div class="tick"><span class="tick-count">21</span> verified stories today</div>
+  <div class="tick">sources: <b>Decanter &middot; Drinks Business &middot; Wine Enthusiast</b></div>
+  <div class="tick">&#9989; no fabrication</div>
 </div>
 
-<footer>
+<div class="page">
+  <div class="zone">
+  <div class="zh"><div class="zh-label">the deals</div><div class="zh-sub">mergers &amp; acquisitions</div></div>
+  <div class="card-grid"><a class="card hero" href="https://www.thedrinksbusiness.com/2025/04/the-wine-group-to-acquire-six-brands-from-constellation/" target="_blank">
+  <h3>The Wine Group Poised to Expand Portfolio with Agreement to Acquire Wine Brands and Production Facilities from Constellation Brands</h3>
+  <p>The Wine Group entered an agreement to acquire several wine brands, three facilities, and approximately 6,600 vineyard acres from Constellation Brands, with the deal completing in early 2026. This significant transaction&hellip;</p>
+  
+  <div class="card-foot"><span>The Drinks Business / The Wine Group</span><span>2026-03-04</span></div>
+</a></div>
+</div>
+  <div class="zone">
+  <div class="zh"><div class="zh-label">in the industry</div><div class="zh-sub">trade &middot; regions &middot; people</div></div>
+  <div class="card-grid"><a class="card hero" href="https://www.decanter.com/wine/california-wine-region/discover-pacific-coast-precision-in-the-santa-cruz-mountains" target="_blank">
+  <h3>Discover Pacific Coast precision in the Santa Cruz Mountains</h3>
+  <p></p>
+  
+  <div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div>
+</a><div class=rest-grid><a class="card" href="https://www.decanter.com/dream-destination/cap-rocat-mallorca-spain" target="_blank">
+  <h3>Dream Destination: Cap Rocat, Mallorca, Spain</h3>
+  <p></p>
+  
+  <div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div>
+</a><a class="card" href="https://www.decanter.com/magazine/decanter-magazine-march-2026-see-whats-inside" target="_blank">
+  <h3>Decanter magazine March 2026: See what's inside</h3>
+  <p></p>
+  
+  <div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div>
+</a><a class="card" href="https://www.decanter.com/wine/spain/experts-choice-18-top-wines-from-the-mountains-of-navarra" target="_blank">
+  <h3>Our expert selects 18 wines from the mountains of Navarra that you need to taste</h3>
+  <p></p>
+  
+  <div class="card-foot"><span>Decanter</span><span>2026-03-04</span></div>
+</a></div></div>
+</div>
+  <div class="zone zone-sm">
+  <div class="zh"><div class="zh-label">tech &amp; process</div><div class="zh-sub">thermovinification &middot; flash d&eacute;tente</div></div>
+  <div class="flat-grid"><a class="card" href="https://www.pellenc.com/en-gb/our-products/from-the-vineyard-to-the-winery/winemaking/thermovinification/flash-detente" target="_blank">
+  <h3>Best Practices for Red Wines After Flash Détente</h3>
+  <p>Flash détente, a thermovinification process, utilizes high temperature, vacuum, and rapid cooling to efficiently extract color and flavor from grapes. This technique minimizes skin contact time and inactivates undesirabl&hellip;</p>
+  
+  <div class="card-foot"><span>Scott Laboratories</span><span>2026-03-02</span></div>
+</a></div>
+</div>
+  <div class="zone zone-sm">
+  <div class="zh"><div class="zh-label">nerding out</div><div class="zh-sub">microbial stability &middot; brett control</div></div>
+  <p class="nil">nothing verified today &#128580;</p>
+</div>
+</div>
+
+<footer class="foot">
   <div>
     <div class="foot-brand">Wine <em>Intel</em></div>
-    <div class="foot-note">verified &middot; no fabrication &middot; sources: Decanter, Drinks Business, Wine Enthusiast, Gemini</div>
+    <div class="foot-meta">verified daily &middot; decanter &middot; drinks business &middot; wine enthusiast &middot; gemini</div>
   </div>
-  <div class="foot-love">Wednesday, March 4, 2026<br>don't forget you're the second best one &#10084;</div>
+  <div class="foot-r">Wednesday, March 4, 2026<br>don't forget you're the second best one &#10084;</div>
 </footer>
+
 </body>
 </html>
