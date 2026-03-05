@@ -21,7 +21,6 @@
     .zone-micro{background:#f0f4f0;border-top:4px solid #4a7c59;}
     .zone-auto{background:#f0f0f7;border-top:4px solid #3d3d7a;}
     .zone-industry{background:#fdf5f0;border-top:4px solid #c9a07a;}
-    .zone-competitor{background:#0f0a0f;border-top:4px solid #8b0000;color:#f0e8f0;}
     .zone-head{display:flex;align-items:baseline;gap:12px;margin-bottom:28px;}
     .zone-label{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;}
     .zone-ma .zone-label{color:#7b2d44;} .zone-thermo .zone-label{color:#a0522d;} .zone-micro .zone-label{color:#4a7c59;} .zone-auto .zone-label{color:#3d3d7a;} .zone-industry .zone-label{color:#9a6a30;}
@@ -33,17 +32,6 @@
     .card-body{padding:20px 20px 0;}
     .card-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;font-weight:600;margin-bottom:8px;}
     .zone-ma .card-tag{color:#7b2d44;} .zone-thermo .card-tag{color:#a0522d;} .zone-micro .card-tag{color:#4a7c59;} .zone-auto .card-tag{color:#3d3d7a;} .zone-industry .card-tag{color:#9a6a30;}
-    .zone-competitor .card{background:#1a0a1a;border-color:#3d1a3d;color:#f0e8f0;}
-    .zone-competitor .card-tag{color:#e87a8a;}
-    .zone-competitor h3{color:#f0e8f0;}
-    .zone-competitor .card-summary{color:#c8a8c8;}
-    .zone-competitor .card-blocks{border-top:1px solid #3d1a3d;}
-    .zone-competitor .block{border-bottom:1px solid #2a0a2a;}
-    .zone-competitor .block-means{background:#1f0a14;}
-    .zone-competitor .block-takeaway{background:#0a1a0a;}
-    .zone-competitor .block-text{color:#ddd;}
-    .zone-competitor .card-foot{border-top:1px solid #2a0a2a;color:#888;}
-    .zone-competitor .zone-label{color:#e87a8a;}
     .card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;line-height:1.3;margin-bottom:10px;}
     .card-summary{font-size:13px;line-height:1.75;color:#5a3a3a;margin-bottom:16px;}
     .card-blocks{border-top:1px solid #f0e8e0;}
@@ -56,6 +44,7 @@
     .block-takeaway{background:#f0faf0;}
     .block-text{font-size:12px;line-height:1.7;color:#333;}
     .card-foot{padding:10px 20px;font-size:11px;color:#aaa;display:flex;justify-content:space-between;border-top:1px solid #f0e8e0;}
+    .empty-note{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#aaa;padding:8px 0;}
     footer{background:#2d0a1a;color:#c9a07a;text-align:center;padding:20px 40px;font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;letter-spacing:0.05em;}
     @media(max-width:768px){header,.zone,.week-banner{padding:20px 16px;}.header-meta{flex-direction:column;gap:6px;}.cards{grid-template-columns:1fr;}}
     .zone-summary{background:#2d0a1a;padding:24px 40px;border-bottom:3px solid #7b2d44;}
@@ -81,31 +70,57 @@
   <div class="zone-summary">
     <div class="summary-label">Today at a glance</div>
     <ul class="summary-list">
-      <li><strong>M&amp;A:</strong> Jackson Family Wines acquires Big Salt, the fast-growing Oregon white blend brand. First 2025-vintage wines released under the new ownership — a signal of how quickly JFW moves post-deal.</li>
-      <li><strong>Thermovinification:</strong> Pellenc's Flash Détente process is getting renewed attention in premium winemaking circles. Its heat-vacuum approach is reshaping how winemakers think about color extraction, aromatic profile, and fruit-forward positioning for global markets.</li>
-      <li><strong>Trade &amp; Markets:</strong> ProWein 2026 is weeks away and producers are gearing up. The Drinks Business previews what to expect — the trade fair remains the most important annual moment for supplier and producer relationship-building in Europe.</li>
-      <li><strong>People:</strong> Natasha Williams featured in The Drinks Business Master Winemaker 100. Know the names that matter in premium production — they're your next conversations.</li>
-      <li><strong>Regions &amp; Vintages:</strong> Decanter retastes 30 Bordeaux 2023s in bottle — a standout vintage getting strong validation. Plus: Santa Cruz Mountains precision winemaking and 18 top wines from Navarra's mountain zones.</li>
-      <li><strong>Rosé &amp; Summer Pipeline:</strong> Château Sainte Marguerite unveils its 2025 rosé collection from Provence. Trend intelligence for accounts planning premium rosé programs.</li>
+      <li><strong>M&amp;A:</strong> Henkell Freixenet takes full control of Freixenet — a major sparkling wine ownership consolidation that opens supplier review windows across the combined portfolio. Treasury Wine Estates CFO steps down, creating executive flux at one of the world's largest wine companies.</li>
+      <li><strong>Wine Fraud:</strong> Jeffry Hill sentenced in the $2.5M Napa wine fraud case — a credibility signal for premium producers who operate with transparent supply chains.</li>
+      <li><strong>Trade &amp; Markets:</strong> Chablis reports strong growth in premium exports to both the UK and US. Holi removed from Delhi's dry day list sparks national debate on alcohol regulation in India's fast-growing market.</li>
+      <li><strong>Industry &amp; Culture:</strong> UNESCO recognition for wine regions — the real pros and cons examined. Dan Duckhorn's conviction in Napa Merlot profiled. Lidl's best wines ranked by Decanter — the value segment is getting serious editorial attention.</li>
+      <li><strong>Regions:</strong> Decanter spotlights Santa Cruz Mountains precision winemaking, 18 top wines from Navarra's mountain zones, and Cap Rocat in Mallorca as a dream wine destination.</li>
+      <li><strong>Thermovinification / Microbial Stability / Enological Suppliers:</strong> No verified specialist stories today.</li>
     </ul>
   </div>
 
-  <!-- M&A / SUPPLIERS -->
+  <!-- M&A / ACQUISITIONS -->
   <div class="zone zone-ma">
     <div class="zone-head"><div class="zone-label">M&amp;A / Acquisitions</div><div class="zone-rule"></div></div>
     <div class="cards">
 
-      <a class="card" href="https://www.kgw.com/article/money/business/jackson-family-wines-acquires-big-salt-oregon-white-blend-maker/283-2acdd42e-e168-4bad-8b3f-97835b82d153" target="_blank">
+      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/henkell-freixenet-takes-on-full-control-of-freixenet/" target="_blank">
         <div class="card-body">
-          <div class="card-tag">Pacific Northwest / Acquisition</div>
-          <h3>Jackson Family Wines Acquires Big Salt — Oregon White Blend Maker Joins a Global Wine Empire</h3>
-          <div class="card-summary">California-based Jackson Family Wines, one of the nation's largest wine companies, has acquired Big Salt, a growing Oregon wine brand known for its white blend. The acquisition — which happened last year — was formally announced March 1, 2026, coinciding with the release of the first Big Salt wines made under Jackson Family from the 2025 vintage. JFW's Oregon footprint expands with a brand that's built momentum in the direct-to-consumer and premium grocery channels.</div>
+          <div class="card-tag">Sparkling Wine / Ownership Consolidation</div>
+          <h3>Henkell Freixenet Takes Full Control of Freixenet — Sparkling Wine Giant Fully Unified Under One Owner</h3>
+          <div class="card-summary">Henkell Freixenet has completed its move to take full control of Freixenet, the iconic Spanish Cava producer. The consolidation unifies one of the world's most recognized sparkling wine brands entirely under the Henkell Freixenet corporate umbrella. The combined entity is now among the largest sparkling wine producers globally, spanning Cava, Prosecco, Sekt, and more.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Jackson Family Wines is one of the most disciplined acquirers in the US wine industry — they don't buy brands without plans to scale them. Big Salt's white blend positioning plays well into the market's appetite for Pacific Northwest provenance at accessible price points. When JFW absorbs a small brand, their production team typically reviews and standardizes input programs quickly. If Big Salt was running a leaner, independent supplier setup, that's likely to change under corporate integration.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If you have any existing relationships in JFW's winemaking or procurement teams, this is a natural opening: "Congrats on the Big Salt deal — are you aligning the input program with your Oregon portfolio?" New acquisitions inside large companies create supplier review moments, especially in the first 6–12 months. Get in front of whoever manages the JFW Oregon accounts before the new program is locked in for 2026 crush.</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Full ownership consolidations at this scale typically precede production standardization reviews. When a parent company gains complete control, supplier relationships across the portfolio get reassessed — inputs, enzymes, nutrients, fining agents. The first 12 months post-consolidation are the highest-risk period for incumbent suppliers and the highest-opportunity window for those not yet embedded. Henkell Freixenet's volume and geographic spread make this a significant procurement moment across multiple markets.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If Enartis has any existing relationship with Freixenet or Henkell, now is the moment to check in: "We saw the consolidation news — how is the team thinking about input programs going forward?" If there's no existing relationship, this is the opening to start one. A company in active reorganization is more receptive to new supplier conversations than one in a stable annual cycle. Sparkling wine at this volume has specific technical requirements — secondary fermentation yeast, riddling aids, disgorgement protocols — that Enartis can speak to directly.</div></div>
         </div>
-        <div class="card-foot"><span>KGW / Jackson Family Wines</span><span>March 1, 2026</span></div>
+        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/treasury-wine-estates-cfo-to-step-down/" target="_blank">
+        <div class="card-body">
+          <div class="card-tag">Executive Change / Treasury Wine Estates</div>
+          <h3>Treasury Wine Estates CFO to Step Down — Leadership Transition at One of the World's Largest Wine Companies</h3>
+          <div class="card-summary">Treasury Wine Estates has announced its Chief Financial Officer will step down, triggering a leadership transition at the top of one of the global wine industry's largest publicly traded companies. TWE's portfolio includes Penfolds, 19 Crimes, Beringer, and a range of major brands across multiple price tiers. CFO departures at companies of this size often precede broader strategic reviews and can signal shifts in cost structure priorities, including supplier relationships.</div>
+        </div>
+        <div class="card-blocks">
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">CFO departures at large wine companies are worth watching because finance leadership has direct influence over procurement budgets, supplier contract terms, and cost-of-goods targets. A new CFO comes in with fresh eyes and a mandate to understand where money is being spent. Incumbent suppliers who aren't delivering demonstrable value are at risk; those who can show clear ROI are in a strong position to deepen relationships or expand scope during the transition window.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If any of your accounts have TWE-adjacent relationships — distributors, buying groups, or direct supply — keep this on your radar. The more immediate play: use it as intelligence when talking to any large wine company account. Leadership transitions create internal flux where winemakers and procurement contacts often have more autonomy. It's a window to have conversations that might not land as easily during stable periods.</div></div>
+        </div>
+        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/jeffry-hill-apologises-after-sentencing-in-2-5m-napa-wine-fraud-case/" target="_blank">
+        <div class="card-body">
+          <div class="card-tag">Wine Fraud / Napa Valley</div>
+          <h3>Jeffry Hill Apologises After Sentencing in $2.5M Napa Wine Fraud Case</h3>
+          <div class="card-summary">Jeffry Hill has been sentenced in a $2.5 million Napa Valley wine fraud case, with the defendant apologising publicly after the ruling. The case involved fraudulent wine sales and misrepresentation at the premium tier — an area where provenance and authenticity are foundational to value. The sentencing closes a case that has been closely watched by Napa producers and premium wine buyers.</div>
+        </div>
+        <div class="card-blocks">
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">High-profile wine fraud cases remind the premium segment that supplier and producer credibility carries real legal and financial consequences. When fraud cases land in Napa, established producers typically respond by emphasizing traceability, documentation, and relationship-based sales practices. For enological suppliers, cases like this underscore the value of operating with transparent documentation and technical credibility across every step of the winemaking input chain.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Use this as a subtle credibility signal when talking to premium Napa accounts: the market is watching how producers represent themselves. Enartis as a supplier brings documented technical protocols and institutional credibility — the kind of supply chain integrity that serious premium producers want to be able to point to. It's not a direct pitch; it's a values alignment conversation that positions you as a partner who understands what matters at the top of the market.</div></div>
+        </div>
+        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
       </a>
 
     </div>
@@ -114,66 +129,83 @@
   <!-- THERMOVINIFICATION -->
   <div class="zone zone-thermo">
     <div class="zone-head"><div class="zone-label">Thermovinification</div><div class="zone-rule"></div></div>
-    <div class="cards">
-
-      <a class="card" href="https://www.pellenc.com/en-gb/our-products/from-the-vineyard-to-the-winery/winemaking/thermovinification/flash-detente" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Heat Extraction / Global Market Trends</div>
-          <h3>Pellenc's Flash Détente: How Rapid Heat-Vacuum Processing Is Reshaping Wine Profiles for International Markets</h3>
-          <div class="card-summary">Pellenc's Flash Détente thermovinification system rapidly heats grapes to high temperatures and immediately cools them under vacuum, extracting color and flavor compounds before fermentation begins. The result is wines that are fruitier, rounder, and more structurally approachable — characteristics aligned with demand patterns in high-growth global export markets. The technology allows winemakers to meaningfully modify wine profiles without compromising varietal character, and is increasingly used to optimize blending lots and improve consistency across vintages.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Flash Détente creates a chemically distinct must — elevated temperature kills native microflora, alters polysaccharide structure, and changes the enzyme substrate significantly. Winemakers adopting this technology for the first time often discover their standard input programs — yeasts, enzymes, nutrients — don't perform the same way in heat-extracted musts. The fermentation input program has to be rebuilt around the must chemistry, not borrowed from conventional workflows.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Flash Détente is an entry point into a technical conversation most reps never initiate. Ask your red wine accounts: "Have you experimented with any heat extraction techniques?" If yes, probe their enzyme and nutrient program — there's a high probability they're running conventional protocols on unconventional musts. Enartis's technical team can help build a proper Flash Détente-specific program, and that expertise is a genuine differentiator when the account is already committed to the technology.</div></div>
-        </div>
-        <div class="card-foot"><span>Pellenc Winemaking</span><span>March 4, 2026</span></div>
-      </a>
-
-    </div>
+    <div class="empty-note">No verified stories today.</div>
   </div>
 
-  <!-- INDUSTRY GENERAL -->
+  <!-- MICROBIAL STABILITY -->
+  <div class="zone zone-micro">
+    <div class="zone-head"><div class="zone-label">Microbial Stability</div><div class="zone-rule"></div></div>
+    <div class="empty-note">No verified stories today.</div>
+  </div>
+
+  <!-- INDUSTRY & TRADE -->
   <div class="zone zone-industry">
     <div class="zone-head"><div class="zone-label">Industry &amp; Trade</div><div class="zone-rule"></div></div>
     <div class="cards">
 
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/fair-play-producers-gear-up-for-prowein/" target="_blank">
+      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/chablis-sees-growth-in-premium-exports-in-both-uk-and-us/" target="_blank">
         <div class="card-body">
-          <div class="card-tag">Trade Fair / ProWein 2026</div>
-          <h3>Producers Gear Up for ProWein 2026 — The Industry's Most Important Annual Gathering Is Weeks Away</h3>
-          <div class="card-summary">The Drinks Business previews ProWein 2026, the world's leading wine and spirits trade fair held in Düsseldorf. Producers across Europe and beyond are finalizing their presentation strategies, booking buyer meetings, and preparing for what remains the most consequential three days in the global wine trade calendar. For suppliers and producers alike, ProWein is where relationships that drive full-year business are built and maintained.</div>
+          <div class="card-tag">Export Growth / Chablis / Classic French White</div>
+          <h3>Chablis Sees Growth in Premium Exports in Both UK and US</h3>
+          <div class="card-summary">Chablis is reporting meaningful growth in premium export volumes to both the UK and US markets, bucking the broader trend of softening wine demand. The region's mineral-driven, unoaked Chardonnay style continues to resonate with buyers and consumers looking for high-quality, terroir-expressive white wine. The data reinforces Chablis's position as one of the most commercially resilient premium French appellations in key export markets.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">ProWein draws the decision-makers — winemakers, procurement leads, and commercial directors — who might otherwise be hard to reach directly. The fair creates a compressed window where in-person conversations happen at a density unavailable in the rest of the year. For enological suppliers, ProWein isn't just a booth — it's an intelligence-gathering moment about what wineries are planning, what problems they're trying to solve, and where supplier gaps exist in their current programs.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Even if you're not attending ProWein, your accounts who are will come back energized with new ideas and new competitive intelligence. Follow up with key accounts the week after the fair: "What were the big conversations at ProWein this year?" You'll learn what topics are dominating their headspace — and that's your 2026 sales roadmap in miniature. Suppliers who ask smart questions after the fair often outperform ones who were actually there.</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Chablis growth in premium tiers signals that buyers are willing to spend on classic appellations with a clear quality identity even in a challenging market. For producers globally making Chardonnay in a restrained, mineral style, this is validating market data. On the technical side, unoaked Chardonnay is demanding — reductive handling, precise SO2 management, tartrate stability, and microbial control all matter more when there's no oak masking imperfections.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For accounts producing Chardonnay in a Chablis-inspired style — unoaked, high-acid, mineral — use this export data as market validation. "The market is rewarding this style right now. What does your technical program look like for keeping the wine clean and bright without wood?" That opens the door to a reductive winemaking conversation where Enartis's protective winemaking tools and SO2 alternatives are directly relevant.</div></div>
         </div>
         <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
       </a>
 
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/master-winemaker-100-natasha-williams/" target="_blank">
+      <a class="card" href="https://www.wineenthusiast.com/culture/industry-news/unesco-wine/" target="_blank">
         <div class="card-body">
-          <div class="card-tag">People / Master Winemaker 100</div>
-          <h3>Natasha Williams Profiled in The Drinks Business Master Winemaker 100</h3>
-          <div class="card-summary">The Drinks Business has named Natasha Williams to its Master Winemaker 100 list, recognizing her as one of the most significant winemaking voices in the industry. The annual list spotlights the winemakers whose decisions shape wine culture, production trends, and quality benchmarks globally. Williams joins a cohort that influences what techniques, inputs, and standards become the next generation's default.</div>
+          <div class="card-tag">Policy / UNESCO / Wine Heritage</div>
+          <h3>Behind the Badge: The Pros and Cons of UNESCO Recognition for Wine Regions</h3>
+          <div class="card-summary">Wine Enthusiast examines the trade-offs of UNESCO World Heritage designation for wine regions — a status that carries enormous marketing cachet but also imposes constraints on viticultural practices, infrastructure development, and regional management. As more wine regions seek designation, the tension between heritage protection and commercial evolution is becoming a genuine industry policy debate.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">The Master Winemaker 100 is a curated list of the people who influence their peers — winemakers who mentor others, speak at events, write technically, and whose preferences ripple through production decisions beyond their own cellar. These are high-value relationship targets for any enological supplier because their endorsement or adoption of a product carries outsized weight in the winemaking community.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Do a quick check on where Natasha Williams is based and what she's currently making — if she's in your territory or accessible, a "congratulations on the recognition" note is a natural, low-pressure opening that has nothing to do with selling. People who just received public recognition are in a receptive state. Get on her radar before someone else does. If she's outside your territory, flag it to whoever covers that region.</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">UNESCO designation is increasingly used as a premium positioning tool by wine regions differentiating internationally. But the designation also constrains what producers within those regions can do — from cellar construction to irrigation approvals to vineyard mechanization. For enological suppliers, it's relevant context: producers in UNESCO-designated regions may face regulatory layers that influence what inputs they can use and how quickly they can adopt new techniques.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">This is a smart conversation-starter with any account in a heritage wine region or one pursuing designation. "Has the UNESCO discussion affected how you think about your production practices?" It's a genuinely interesting industry topic that positions you as someone who reads beyond price lists. If their region has designation or is pursuing it, it's also intelligence about their regulatory environment — which affects what solutions they're open to.</div></div>
+        </div>
+        <div class="card-foot"><span>Wine Enthusiast</span><span>March 4, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.wineenthusiast.com/culture/industry-news/dan-duckhorn-merlot/" target="_blank">
+        <div class="card-body">
+          <div class="card-tag">Napa Valley / Merlot / Producer Profile</div>
+          <h3>Through Thick and Thin, Dan Duckhorn Believed in Napa Valley Merlot</h3>
+          <div class="card-summary">Wine Enthusiast profiles Dan Duckhorn's decades-long commitment to Napa Valley Merlot — a variety that fell out of fashion after the "Sideways" effect but that Duckhorn never abandoned. The profile traces how his conviction in the grape's quality potential, combined with disciplined winemaking, built one of the most recognized Merlot programs in California. The story is as much about staying the course during market headwinds as it is about the wine itself.</div>
+        </div>
+        <div class="card-blocks">
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Merlot is in genuine commercial rehabilitation — after years overshadowed by Cabernet and Pinot Noir, premium Napa Merlot is finding a new audience. The Duckhorn profile is part of a broader editorial pattern validating the variety's return. For producers growing or acquiring Merlot, this is market tailwind worth noting — and a signal to think about what their Merlot program communicates about quality and terroir commitment.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Any account in Napa producing Merlot will have opinions about this profile. Dan Duckhorn is a known name; the piece is a natural conversation-starter. For the technical angle: Merlot's earlier harvest window, lower tannin structure, and sensitivity to over-extraction make fermentation management decisions especially consequential. That's a conversation about enzyme timing, color stability, and tannin management — squarely in Enartis territory.</div></div>
+        </div>
+        <div class="card-foot"><span>Wine Enthusiast</span><span>March 4, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/real-liquor-scam-holi-axed-from-delhi-dry-day-list-sparking-debate/" target="_blank">
+        <div class="card-body">
+          <div class="card-tag">Regulation / India / Alcohol Policy</div>
+          <h3>'Real Liquor Scam': Holi Axed from Delhi Dry Day List, Sparking National Debate</h3>
+          <div class="card-summary">Delhi's government has removed Holi from its official dry day list, triggering a national debate about alcohol regulation, cultural politics, and commercial interests in India. Critics are calling the move a "real liquor scam," arguing it prioritizes tax revenue over tradition. The controversy highlights the ongoing tension between alcohol industry growth and regulatory frameworks across India's fast-growing market.</div>
+        </div>
+        <div class="card-blocks">
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">India's alcohol regulatory environment is in active flux as the country's wine and spirits market grows. State-level dry day policies, import duties, and licensing frameworks are all moving targets — and political sensitivity around alcohol in India is high. For international wine producers and suppliers with any India market exposure, the regulatory volatility is both a risk and an opportunity: policy changes that open consumption windows also create commercial moments.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">This is macro-awareness intelligence rather than a direct sales opportunity. But if you work with any importers or distributors with India exposure, it's useful context: India's regulatory environment is loosening in some areas while remaining restrictive in others. Accounts watching India as an emerging export market will appreciate the intelligence. It positions you as someone who tracks global market dynamics, not just local winery news.</div></div>
         </div>
         <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
       </a>
 
-      <a class="card" href="https://www.thedrinksbusiness.com/2026/03/chateau-sainte-marguerite-unveils-2025-rose-collection/" target="_blank">
+      <a class="card" href="https://www.decanter.com/wine-reviews-tastings/supermarket-wines/best-lidl-wines-331843" target="_blank">
         <div class="card-body">
-          <div class="card-tag">Provence Rosé / 2025 Vintage</div>
-          <h3>Château Sainte Marguerite Unveils Its 2025 Rosé Collection from Provence</h3>
-          <div class="card-summary">Château Sainte Marguerite, one of Provence's benchmark estates, has released its 2025 rosé collection. The estate — known for elegantly structured, terroir-driven Provence rosé across multiple tiers — is among the first major Provence producers to put the 2025 vintage forward publicly. Early signals on the vintage suggest excellent growing conditions and wines that maintain the freshness and mineral character Sainte Marguerite is known for.</div>
+          <div class="card-tag">Retail / Supermarket Wine / Value Segment</div>
+          <h3>These Are Lidl's Best Wines — Decanter's Expert Picks from the Budget Giant</h3>
+          <div class="card-summary">Decanter has published its expert picks of the best wines currently available at Lidl, the European discount supermarket chain. Several wines earn notably high scores for their value tier. Lidl's growing wine program — which sources from established producers across Europe — has become a benchmark for how serious wine quality has become in the value segment globally.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Provence rosé remains one of the most resilient premium wine categories globally, and Château Sainte Marguerite sits at the aspirational tier of that market. When a benchmark estate releases its collection early, it sets the 2025 vintage narrative. This is trend intelligence: buyers at retail and on-premise who are planning their summer rosé programs will look to estates like Sainte Marguerite to understand what the vintage offers before committing to volume buys.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Provence rosé producers at this level are running sophisticated fermentation and stabilization programs — reductive handling, precise SO2 management, cold stabilization, tartrate control. If you have accounts focused on Provence-style rosé (in Provence or producing Provençal-style wine elsewhere), use the Sainte Marguerite release as a conversation hook about what the 2025 vintage demands technically. What did the growing conditions mean for pH, acid levels, and microbial stability requirements heading into winemaking?</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Decanter covering Lidl's wine program signals how much the value segment has shifted. Large-volume retail buyers like Lidl demand higher technical quality at lower prices — which puts pressure on producers supplying these channels to deliver consistency, stability, and clean fermentation across large batch runs. The winners in the value segment are producers who have industrialized quality, not just price. That's a technical challenge enological suppliers can directly address.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For any account supplying to large retail or grocery channels — or aspiring to — the Lidl benchmark is relevant context. "The value segment is getting more technically sophisticated. Are your programs optimized for consistency across high-volume production?" That opens a conversation about fermentation reliability, microbial control at scale, and the kind of input programs that make large-batch production consistently clean. Enartis's expertise in volume winemaking is a real differentiator here.</div></div>
         </div>
-        <div class="card-foot"><span>The Drinks Business</span><span>March 4, 2026</span></div>
+        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
       </a>
 
     </div>
@@ -184,41 +216,41 @@
     <div class="zone-head"><div class="zone-label">Regions &amp; Vintages</div><div class="zone-rule"></div></div>
     <div class="cards">
 
-      <a class="card" href="https://www.decanter.com/wine/bordeaux-wines/bordeaux-2023-retasted-in-bottle-30-of-the-finest-wines-from-this" target="_blank">
-        <div class="card-body">
-          <div class="card-tag">Bordeaux 2023 / Vintage Validation</div>
-          <h3>Bordeaux 2023 Retasted in Bottle: 30 of the Finest Wines from an Excellent Vintage</h3>
-          <div class="card-summary">Decanter has retasted 30 leading Bordeaux 2023s in bottle, delivering strong confirmation that the vintage — already well-regarded en primeur — is delivering on its promise. The wines are showing precision, freshness, and structural elegance across the appellations, with Pomerol and Saint-Émilion getting particular attention. This is a vintage that rewards producers who made clean, technically sound wines in a growing season that demanded careful cellar work.</div>
-        </div>
-        <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">When Decanter validates a vintage in bottle, it shapes what the broader wine trade believes and communicates to consumers. Bordeaux 2023 being confirmed as excellent means buyers at all tiers will be more confident committing to the vintage — and that wines from this year will sell. For producers working with Bordeaux varieties (Cab Sauv, Merlot, Cab Franc) anywhere in the world, 2023 benchmarks from Bordeaux give useful technical reference points about what worked in a fresh, relatively lower-alcohol season.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For any account growing or working with Bordeaux varieties, use Decanter's coverage to open a conversation about vintage character and what it asks of the fermentation program. Fresh, higher-acid Bordeaux vintages like 2023 benefit from specific malolactic management, tannin integration approaches, and SO2 timing. If your account is planning to release their own 2023 Bordeaux-variety wines soon, they're thinking about these decisions right now.</div></div>
-        </div>
-        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
-      </a>
-
       <a class="card" href="https://www.decanter.com/wine/california-wine-region/discover-pacific-coast-precision-in-the-santa-cruz-mountains" target="_blank">
         <div class="card-body">
-          <div class="card-tag">California / Santa Cruz Mountains</div>
+          <div class="card-tag">California / Santa Cruz Mountains / Cool Climate</div>
           <h3>Discover Pacific Coast Precision in the Santa Cruz Mountains</h3>
-          <div class="card-summary">Decanter profiles the Santa Cruz Mountains AVA, highlighting the region's reputation for precision winemaking driven by its cool Pacific Coast climate, diverse soils, and extreme elevation variation. The region produces some of California's most sought-after Pinot Noir and Chardonnay, with a winemaking culture that prizes restraint, site expression, and minimal intervention — conditions that demand careful microbial management and technical precision in the cellar.</div>
+          <div class="card-summary">Decanter profiles the Santa Cruz Mountains AVA, spotlighting its reputation for precision winemaking driven by cool Pacific Coast climate, diverse soils, and extreme elevation variation. The region produces some of California's most sought-after Pinot Noir and Chardonnay, with a winemaking culture that prizes restraint, site expression, and minimal intervention — conditions that demand careful technical management in the cellar to protect delicate aromatic profiles.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Santa Cruz Mountains is a high-prestige, small-production AVA where winemakers are deeply invested in terroir expression. When Decanter profiles a region, it increases buyer and consumer awareness — and often triggers production expansion or quality investment at estates that want to capitalize on the visibility. Producers here run sophisticated programs and are open to technical conversations that align with their minimal-intervention philosophy.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Cool-climate, high-elevation Pinot Noir and Chardonnay from Santa Cruz Mountains is technically demanding — low pH, delicate aromatics, brett risk in barrel, reductive white wine challenges. If you have accounts in this AVA or the broader Santa Cruz Coast, the Decanter spotlight is a natural conversation starter. Any producer who just got regional attention is thinking about quality investment. That's your window.</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Santa Cruz Mountains is a small, high-prestige AVA where editorial coverage from Decanter creates direct commercial lift. Producers here are typically detail-oriented, technically sophisticated, and deeply invested in site character. Cool-climate Pinot and Chardonnay from this AVA requires precise cellar management: low pH environments, delicate aromatic protection, brett risk management in barrel, and careful SO2 protocols to preserve freshness without stripping character.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If you have any accounts in the Santa Cruz Mountains AVA or the broader Santa Cruz Coast, the Decanter feature is a natural check-in moment: "Did you see the Decanter piece on the region? Any interest in talking through what the cool-climate conditions mean for your technical program this vintage?" Producers who just received regional editorial attention are often thinking about quality investment — and your timing will land well.</div></div>
         </div>
         <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
       </a>
 
       <a class="card" href="https://www.decanter.com/wine/spain/experts-choice-18-top-wines-from-the-mountains-of-navarra" target="_blank">
         <div class="card-body">
-          <div class="card-tag">Spain / Navarra Mountain Wines</div>
+          <div class="card-tag">Spain / Navarra / Mountain Wines</div>
           <h3>18 Top Wines from the Mountains of Navarra — Decanter's Expert Selection</h3>
-          <div class="card-summary">Decanter's expert selects 18 standout wines from Navarra's mountain zones, shining a light on a region that blends indigenous Spanish varieties with international grapes at altitude. Navarra's mountain appellations — particularly around the Pyrenean foothills — produce structured reds and aromatic whites with distinct mineral character. The region is increasingly attracting attention from buyers looking beyond Rioja for quality Spanish wine at accessible price points.</div>
+          <div class="card-summary">Decanter's expert selects 18 standout wines from Navarra's mountain zones, shining a light on a region blending indigenous Spanish varieties with international grapes at altitude. Navarra's mountain appellations — particularly around the Pyrenean foothills — produce structured reds and aromatic whites with distinct mineral character, attracting growing attention from buyers looking beyond Rioja for quality Spanish wine at accessible price points.</div>
         </div>
         <div class="card-blocks">
-          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Navarra's emergence as a quality Spanish region beyond its traditional Garnacha rosado identity reflects a broader pattern: mountain zones across Spain are producing wines that can compete internationally on quality while remaining competitively priced. This editorial coverage from Decanter signals a coming wave of buyer interest in the region — which means producers there will be investing in winemaking quality to meet that attention.</div></div>
-          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">If Enartis has any presence in northern Spain — directly or through distributor partners — the Navarra coverage is intelligence worth passing along to the team. For US-based accounts, Decanter's Navarra feature is a conversation starter with any sommelier or buyer program focused on Spanish wines: "Are you following what's happening in the Navarra mountain zones? The quality story is starting to break through." It positions you as a well-read industry contact, not just a sales rep.</div></div>
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Navarra's emergence as a quality Spanish region reflects a broader pattern: mountain and high-altitude zones across Spain are producing wines that can compete internationally on quality while remaining price-competitive. Editorial coverage from Decanter signals a coming wave of buyer interest — which means producers there will be investing in winemaking quality to meet that attention. Spain's mountain zones bring their own technical challenges: wide diurnal temperature swings, variable vintage conditions, and diverse variety programs that demand flexible input approaches.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">For US-facing conversations, the feature is useful intelligence for any buyer or sommelier program focused on Spanish wines: "Are you following what's happening in the Navarra mountain zones? Decanter just put 18 picks out — the quality signal is breaking through to mainstream buyers." It positions you as a well-connected industry reader. If Enartis has any European distribution presence in northern Spain, this coverage is worth flagging internally.</div></div>
+        </div>
+        <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
+      </a>
+
+      <a class="card" href="https://www.decanter.com/dream-destination/cap-rocat-mallorca-spain" target="_blank">
+        <div class="card-body">
+          <div class="card-tag">Travel / Mallorca / Wine Tourism</div>
+          <h3>Dream Destination: Cap Rocat, Mallorca, Spain</h3>
+          <div class="card-summary">Decanter features Cap Rocat in Mallorca as a dream wine destination — a luxury resort built into a 19th-century sea fortress overlooking the Bay of Palma. Mallorca's wine scene has grown significantly in prestige, with the island producing distinctive wines from indigenous varieties like Callet and Prensal Blanc. Cap Rocat represents the premium wine tourism experience increasingly driving consumer interest in Spanish island wines.</div>
+        </div>
+        <div class="card-blocks">
+          <div class="block block-means"><div class="block-label">💡 What this means</div><div class="block-text">Wine tourism at luxury properties like Cap Rocat drives interest in a region's wines well beyond the visitors themselves — editorial coverage in Decanter reaches an aspirational readership that influences what sommeliers list and what specialty retailers stock. Mallorca's wine scene is positioned at the premium end of Spanish island wine, with producers increasingly investing in quality winemaking to match their tourism reputation.</div></div>
+          <div class="block block-takeaway"><div class="block-label">✅ Amy's sales angle</div><div class="block-text">Mallorca's quality-focused producers — particularly those associated with the island's luxury hospitality sector — are open to conversations with technically credible suppliers. If you have any Spanish market exposure or relationships with importers who carry Mallorcan wines, this is a warm conversation topic. Wine tourism destinations at this level often drive restaurant and retail placement far beyond the island; knowing who's producing the wines guests fall in love with at Cap Rocat is useful intelligence for the whole channel.</div></div>
         </div>
         <div class="card-foot"><span>Decanter</span><span>March 4, 2026</span></div>
       </a>
