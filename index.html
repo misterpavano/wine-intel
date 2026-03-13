@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Wine Intel &mdash; March 12, 2026</title>
+<title>Wine Intel &mdash; March 13, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -19,6 +19,8 @@
   --rule:#EAE0D4;
 }
 body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1}
+
+/* HEADER */
 .hdr{background:var(--wine);color:#fff}
 .hdr-top{padding:9px 44px;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between}
 .hdr-top span{font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.28)}
@@ -31,19 +33,32 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webki
 .hdr-for b{color:rgba(255,255,255,0.75);font-weight:700}
 .hdr-date{font-size:11px;font-weight:500;color:rgba(255,255,255,0.25)}
 .hdr-stripe{height:3px;background:linear-gradient(90deg,var(--orange) 0%,#E8A04C 55%,transparent 100%)}
+
+/* TICKER */
 .ticker{background:#0E0408;padding:11px 44px;display:flex;gap:32px;overflow:hidden;border-bottom:1px solid #1a0810}
 .tick{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;color:rgba(255,255,255,0.3)}
 .tick b{color:var(--orange)}
 .tick-count{color:rgba(255,255,255,0.55)}
+
+/* LAYOUT */
 .page{max-width:1180px;margin:0 auto;padding:0 44px 96px}
 .zone{margin-top:56px}
 .zone-sm{margin-top:40px}
+
+/* ZONE HEADER */
 .zh{display:flex;align-items:baseline;gap:12px;margin-bottom:2px;border-bottom:1px solid var(--rule);padding-bottom:10px}
 .zh-label{font-size:10px;font-weight:900;letter-spacing:0.32em;text-transform:uppercase;color:var(--ink)}
 .zh-sub{font-size:10px;font-weight:400;color:var(--muted);font-style:italic}
 .nil{font-size:13px;color:var(--muted);font-style:italic;padding:16px 0}
+
+/* HERO + REST GRID */
 .card-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:1px;background:var(--rule);margin-top:1px}
+.rest-grid{display:grid;grid-template-rows:1fr 1fr;gap:1px;background:var(--rule)}
+
+/* FLAT GRID (small zones) */
 .flat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--rule);margin-top:1px}
+
+/* CARDS */
 .card{background:var(--s);padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:background 0.1s}
 .card:hover{background:#FBF6F1}
 .card h3{font-size:15px;font-weight:700;line-height:1.33;letter-spacing:-0.012em;color:var(--ink)}
@@ -53,20 +68,24 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webki
 .pill-m{background:#FFF8EE;border-left:2px solid var(--yellow);color:#3A2000}
 .pill-t{background:#FDF3F5;border-left:2px solid var(--orange);color:#4A1020}
 .card-foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+
+/* FOOTER */
 .foot{background:var(--ink);padding:28px 44px;margin-top:80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;border-top:3px solid var(--orange)}
 .foot-brand{font-size:17px;font-weight:900;letter-spacing:-0.03em;color:#fff}
 .foot-brand em{color:var(--orange);font-style:italic}
 .foot-meta{font-size:9px;color:rgba(255,255,255,0.2);margin-top:4px;font-weight:500;letter-spacing:0.05em}
 .foot-r{text-align:right;font-size:10px;color:rgba(255,255,255,0.25);line-height:1.8}
-@media(max-width:860px){.card-grid{grid-template-columns:1fr}.hdr-main{grid-template-columns:1fr}.hdr-right{text-align:left}}
+
+@media(max-width:860px){.card-grid,.rest-grid{grid-template-columns:1fr}.hdr-main{grid-template-columns:1fr}.hdr-right{text-align:left}}
 @media(max-width:600px){.hdr-top,.hdr-main,.ticker,.page,.foot{padding-left:20px;padding-right:20px}.hdr-wordmark{font-size:68px}.flat-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <header class="hdr">
   <div class="hdr-top">
     <span>wine industry intelligence</span>
-    <span>Thursday &middot; March 12, 2026</span>
+    <span>Friday &middot; March 13, 2026</span>
   </div>
   <div class="hdr-main">
     <div>
@@ -75,109 +94,91 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webki
     </div>
     <div class="hdr-right">
       <div class="hdr-for">curated for <b>Amy</b></div>
-      <div class="hdr-date">March 12, 2026</div>
+      <div class="hdr-date">March 13, 2026</div>
     </div>
   </div>
   <div class="hdr-stripe"></div>
 </header>
+
 <div class="ticker">
   <div class="tick">&#127863; <b>Wine Intel</b></div>
-  <div class="tick"><span class="tick-count">16</span> verified stories today</div>
-  <div class="tick">sources: <b>Decanter &middot; Drinks Business</b></div>
+  <div class="tick"><span class="tick-count">12</span> verified stories today</div>
+  <div class="tick">sources: <b>Decanter &middot; Drinks Business &middot; Wine Enthusiast</b></div>
   <div class="tick">&#9989; no fabrication</div>
 </div>
+
 <div class="page">
   <div class="zone">
-  <div class="zh"><div class="zh-label">in the industry</div><div class="zh-sub">decanter &middot; regions &middot; people</div></div>
-  <div class="card-grid"><a class="card hero" href="https://www.decanter.com/decanter-world-wine-awards/dwwa-results-highlights/italy-for-the-cellar-a-dwwa-collection" target="_blank">
-  <h3>Italy for the cellar: A DWWA collection</h3>
-  <p></p>
+  <div class="zh"><div class="zh-label">the deals</div><div class="zh-sub">mergers &amp; acquisitions</div></div>
+  <div class="card-grid"><a class="card hero" href="https://www.globenewswire.com/news-release/2026/03/12/3255012/0/en/AdVini-and-Cordier-By-InVivo-wich-entered-exclusive-negociations-on-december-15-sign-a-binding-agreement.html" target="_blank">
+  <h3>AdVini and Cordier By InVivo Sign Binding Agreement to Consolidate Wine Industry Position</h3>
+  <p>AdVini and Cordier by InVivo have signed a binding agreement to merge parts of their operations, strengthening AdVini's commercial positions and expanding its international distribution network. This deal, expected to be&hellip;</p>
   
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><div class=rest-flow><a class="card" href="https://www.decanter.com/learn/canadian-wine-finds-a-silver-lining-in-the-strained-relationship-with-america-first" target="_blank">
-  <h3>Canadian wine finds a silver lining in the strained relationship with ‘America first’</h3>
-  <p></p>
+  <div class="card-foot"><span>GlobeNewswire</span><span>2026-03-12</span></div>
+</a><div class=rest-flow><a class="card" href="https://wineindustryadvisor.com/2026/03/11/mercer-wine-estates-to-acquire-four-leading-washington-wine-brands/" target="_blank">
+  <h3>Mercer Wine Estates Acquires Four Leading Washington Wine Brands</h3>
+  <p>Mercer Wine Estates, a family-owned winegrower in Washington State, announced the acquisition of Matthews, Tenor, Jaine, and Single Barrel brands. This move strengthens Mercer's vineyard-driven portfolio and expands its &hellip;</p>
   
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/magazine/on-the-rack-jeanette-winterson-cbe" target="_blank">
-  <h3>On the rack: Jeanette Winterson CBE</h3>
-  <p></p>
+  <div class="card-foot"><span>Mercer Wine Estates</span><span>2026-03-11</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2025/04/the-wine-group-to-acquire-six-brands-from-constellation/" target="_blank">
+  <h3>[RETURNING] The Wine Group to Complete Acquisition of Six Brands from Constellation Brands</h3>
+  <p>The Wine Group is set to finalize its agreement to acquire several wine brands, including Meiomi and Robert Mondavi Private Selection, along with three facilities and approximately 2,670 vineyard hectares from Constellat&hellip;</p>
   
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/decanter-world-wine-awards/dwwa-success-story-paris-simoneau-praises-medal-impact" target="_blank">
-  <h3>DWWA success story: Paris-Simoneau praises medal impact</h3>
-  <p></p>
-  
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/wine/rhone-valley/its-a-rock-thing-meeting-georges-truc-the-rhones-wine-geologist" target="_blank">
-  <h3>It's a rock thing: Meeting Georges Truc, the Rhône’s wine geologist</h3>
-  <p></p>
-  
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/learn/what-does-americas-harsh-winter-mean-for-its-vineyards" target="_blank">
-  <h3>What does America's harsh winter mean for its vineyards?</h3>
-  <p></p>
-  
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/wine/california-wine-region/bo-barrett-the-man-at-montelena" target="_blank">
-  <h3>Bo Barrett: The man at Chateau Montelena</h3>
-  <p></p>
-  
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.decanter.com/wine/spain/lighting-up-levante-the-new-taste-of-south-eastern-spain" target="_blank">
-  <h3>Lighting up Levante – the new taste of south-eastern Spain</h3>
-  <p></p>
-  
-  <div class="card-foot"><span>Decanter</span><span>2026-03-12</span></div>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-04-10</span></div>
 </a></div></div>
+</div>
+  <div class="zone">
+  <div class="zh"><div class="zh-label">in the industry</div><div class="zh-sub">decanter &middot; regions &middot; people</div></div>
+  <div class="card-grid"><a class="card hero" href="https://www.decanter.com/wine/wine-regions/wines-without-pedigree-from-outsiders-to-spanish-icons-of-the-future" target="_blank">
+  <h3>Wines without pedigree: from outsiders to Spanish icons of the future</h3>
+  <p></p>
+  
+  <div class="card-foot"><span>Decanter</span><span>2026-03-13</span></div>
+</a></div>
 </div>
   <div class="zone">
   <div class="zh"><div class="zh-label">trade &amp; market</div><div class="zh-sub">the drinks business</div></div>
-  <div class="card-grid"><a class="card hero" href="https://www.thedrinksbusiness.com/2026/03/vik-releases-rare-vertical-of-its-iconic-wine/" target="_blank">
-  <h3>VIK releases rare vertical of its iconic wines</h3>
+  <div class="card-grid"><a class="card hero" href="https://www.thedrinksbusiness.com/2026/03/consumers-are-taking-a-leap-into-the-unexpected-ukrainian-wine-brand-bolgrad-expands-uk-listings/" target="_blank">
+  <h3>“Consumers are taking a leap into the unexpected”: Ukrainian wine brand Bolgrad expands UK listings</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><div class=rest-flow><a class="card" href="https://www.thedrinksbusiness.com/2026/03/canadian-mp-moves-to-scrap-law-banning-inter-province-wine-sales/" target="_blank">
-  <h3>Canadian MP moves to scrap law banning inter-province wine sales</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><div class=rest-flow><a class="card" href="https://www.thedrinksbusiness.com/2026/03/vault-city-brewing-invests-in-flavour-development/" target="_blank">
+  <h3>Vault City Brewing invests in flavour development</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/champagne-sales-unlikely-to-rebound-in-2026/" target="_blank">
-  <h3>Champagne sales unlikely to rebound in 2026</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/heres-why-prowines-2026-asia-fairs-deserve-a-spot-on-your-calendar/" target="_blank">
+  <h3>Here’s why ProWine’s 2026 Asia fairs deserve a spot on your calendar</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/master-winemaker-100-fabrice-bandiera/" target="_blank">
-  <h3>Master Winemaker 100: Fabrice Bandiera</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/hong-kongs-bar-leone-heads-to-the-oscars-after-party/" target="_blank">
+  <h3>Hong Kong’s Bar Leone heads to Oscars after party</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/world-atlas-of-wine-returns-with-ninth-edition/" target="_blank">
-  <h3>World Atlas of Wine returns with ninth edition</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/3-ways-asias-bar-scene-is-different-from-europe/" target="_blank">
+  <h3>3 ways Asia’s bar scene is different from Europe</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/golden-vines-scholarships-open-to-wine-professionals-affected-by-conflict/" target="_blank">
-  <h3>Golden Vines scholarships open to wine professionals affected by conflict</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/womens-prison-hospitality-academy-marks-first-graduates/" target="_blank">
+  <h3>Women’s prison hospitality academy marks first graduates</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/top-10-drinks-launches-from-march/" target="_blank">
-  <h3>Top 10 drinks launches from March</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/consumers-deserve-to-know-what-theyre-buying-essex-police-seize-67000-bottles-of-fake-wine/" target="_blank">
+  <h3>‘Consumers deserve to know what they’re buying’: Essex police seize 67,000 bottles of fake wine</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
-</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/piper-heidsieck-returns-courtside-at-miami-open-with-champagne-garden-activation/" target="_blank">
-  <h3>Piper-Heidsieck returns courtside at Miami Open with Champagne Garden activation</h3>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
+</a><a class="card" href="https://www.thedrinksbusiness.com/2026/03/guinness-at-3-49-leads-st-patricks-day-pricing-push-in-uk-pubs/" target="_blank">
+  <h3>Guinness at £3.49 leads St Patrick’s Day pricing push in UK pubs</h3>
   <p></p>
   
-  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-12</span></div>
+  <div class="card-foot"><span>The Drinks Business</span><span>2026-03-13</span></div>
 </a></div></div>
-</div>
-  <div class="zone zone-sm">
-  <div class="zh"><div class="zh-label">the deals</div><div class="zh-sub">mergers &amp; acquisitions</div></div>
-  <p class="nil">nothing verified today &#128580;</p>
 </div>
   <div class="zone zone-sm">
   <div class="zh"><div class="zh-label">wine life</div><div class="zh-sub">wine enthusiast &middot; travel &middot; culture</div></div>
@@ -196,12 +197,14 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webki
   <p class="nil">nothing verified today &#128580;</p>
 </div>
 </div>
+
 <footer class="foot">
   <div>
     <div class="foot-brand">Wine <em>Intel</em></div>
-    <div class="foot-meta">verified daily &middot; decanter &middot; drinks business &middot; gemini</div>
+    <div class="foot-meta">verified daily &middot; decanter &middot; drinks business &middot; wine enthusiast &middot; gemini</div>
   </div>
-  <div class="foot-r">Thursday, March 12, 2026<br>don't forget you're the second best one &#10084;</div>
+  <div class="foot-r">Friday, March 13, 2026<br>don't forget you're the second best one &#10084;</div>
 </footer>
+
 </body>
 </html>
